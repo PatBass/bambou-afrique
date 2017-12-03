@@ -1,0 +1,476 @@
+#presentation
+{
+    /*margin-left: 15%;*/
+    background-color: rgba(255,255,255,0.3);
+
+   /* width: 25%;
+    margin-top: 80px;*/
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+div#image2
+{
+
+    background-color:rgba(255,255,255,0.5);
+}
+
+
+section{
+    background-color: #ced7e6;/*#ced7e6, dfdfdf */
+}
+
+.main-example .label {
+    font-size: normal;
+    margin-top: 5px;
+    display: block;
+    position: absolute;
+    top: 95px;
+    width: 100%;
+    color: #fff;
+    text-transform: capitalize;
+}
+.home-welcome {
+    padding: 10px 0 !important;
+    width: 100%;
+    text-align: center;
+}
+
+/* Social Medias */
+ul.social-buttons {
+    margin-bottom:0;
+}
+ul.social-buttons li a {
+    display:block;
+    background-color:#222;
+    height:40px;
+    width:40px;
+    border-radius:100%;
+    font-size:20px;
+    line-height:40px;
+    color:#fff;
+    outline:0;
+    -webkit-transition:all 2s;
+    -moz-transition:all 2s;
+    transition:all 2s;
+}
+ul.social-buttons li a:hover,ul.social-buttons li a:focus,ul.social-buttons li a:active {
+    background-color:#fed136
+}
+
+.portfolio-modal .modal-content ul.list-inline {
+    margin-bottom:30px;
+    margin-top:0
+}
+
+
+/* Social media icons in the body of home page */
+.social-slide {
+    background-image: url('../images/facebook-hover.png');
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    float: left;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+.social-slide:hover {
+    background-position: 0px -48px;
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+}
+
+.social-slide2 {
+    background-image: url('images/twitter-hover.png');
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    float: left;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+.social-slide2:hover {
+    background-position: 0px -48px;
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+}
+
+
+.icon-facebook:before {
+    content: "\e86f";
+}
+.icon-facebook-sign:before {
+    content: "\e736";
+}
+.icon-facebook2:before {
+    content: "\e74d";
+}
+.icon-line2-social-facebook:before {
+    content: "\e00b";
+}
+.si-sticky.si-sticky-right {
+    left: auto;
+    right: 8px;
+}
+.si-sticky {
+    position: fixed;
+    top: 75%;
+    left: 5px;
+    width: 36px;
+    z-index: 100;
+}
+
+.social-icon {
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.si-facebook:hover, .si-colored.si-facebook {
+    background-color: #3B5998 !important;
+}
+
+.si-colored.social-icon {
+    border-color: transparent;
+}
+
+.bounceInRight {
+    -webkit-animation-name: bounceInRight;
+    animation-name: bounceInRight;
+}
+
+.animated {
+    opacity: 1;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.si-colored {
+    border-color: transparent !important;
+}
+
+
+.social-icon {
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.si-facebook:hover, .si-colored.si-facebook {
+    background-color: #3B5998 !important;
+}
+.si-colored.social-icon {
+    border-color: transparent;
+}
+.bounceInRight {
+    -webkit-animation-name: bounceInRight;
+    animation-name: bounceInRight;
+}
+.animated {
+    opacity: 1;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.si-colored {
+    border-color: transparent !important;
+}
+.social-icon {
+    margin: 0 5px 5px 0;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 38px !important;
+    color: #555;
+    text-shadow: none;
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.social-icon {
+    display: block;
+    float: left;
+    margin: 4px 11px 7px 0;
+    text-align: center !important;
+    font-size: 28px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    cursor: pointer;
+    font-style: normal;
+}
+/* YouTube */
+.si-colored.si-youtube {
+    background-color: #C4302B !important;
+}
+.si-youtube:hover,
+.si-colored.si-youtube { background-color: #C4302B !important; }
+.si-youtube i { color: #C4302B; }
+
+.social-icon i {
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.social-icon i {
+    display: block;
+    position: relative;
+}
+
+[class^="icon-"], [class*=" icon-"], [class^="icon-line-"], [class*=" icon-line-"], [class^="icon-line2-"], [class*=" icon-line2-"], .side-header #primary-menu ul > li.sub-menu > a:after {
+    display: inline-block;
+    font-family: 'font-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.si-colored i {
+    color: #FFF;
+}
+
+/* popout social media icons */
+.social-popout {
+    height: 48px;
+    width: 48px;
+    margin: 10px;
+    float: left;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+.social-popout img {
+    border-radius: 50%;
+    margin: 8px;
+    width: 100%;
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+.social-popout img:hover {
+    margin: 0px;
+    box-shadow: 6px 6px 4px 4px rgba(0,0,0,0.3);
+}
+
+section#contact .text-danger {
+    color:#e74c3c;
+}
+
+#bb {
+    z-index: 255;width:100%; height:700px;color:white;
+}
+
+#iframe-youtube {
+    width:100%; height:250px;
+}
+
+#main-iframe {
+    margin: 0!important;padding: 0!important;width:100%;/*border: 6px solid purple;*/height: 1000px;
+}
+
+#email {
+    width: 70%;
+
+}
+
+#main-example {
+    font-size: 20px;
+}
+
+/*#mc-embedded-subscribe{
+    position: relative;
+    left: 195%;
+}*/
+
+#main-iframe-container {
+    width:100%;/*border: 6px solid blue;*/position: absolute;left:0.01%; z-index: 1;text-align: center;margin: 0;padding: 0;
+    height: 1000px;
+}
+
+#main-body {
+    margin: 0!important;padding: 0!important;overflow-x: hidden;border: 6px solid #000000;height: 1000px;
+}
+
+#text-project {
+    font-size: 2em;
+}
+
+/* ================= SMALL SCREENS ================================================== */
+
+/*---------------- On Small Size Devices / Tablets (>=768px)-----------------------*/
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+    #text-project {
+        font-size: 3em;
+    }
+
+    #newsletter-paragraph {
+        font-size: 2em;
+    }
+
+    #presentation {
+        /*margin-left: 15%;*/
+        background-color: rgba(255,255,255,0.1);
+        /* width: 25%;
+         margin-top: 80px;*/
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        top: 200px;
+
+        font-size: 0.5em;
+    }
+    /*#email {
+        width: 205%;
+        position: relative;
+        left: 135%;
+    }
+    #mc-embedded-subscribe{
+        position: relative;
+        left: 315%;
+    }*/
+
+    #presentation
+    {
+        /*margin-left: 15%;*/
+        background-color: rgba(0,0,0,0.1);
+        /* width: 25%;
+         margin-top: 80px;*/
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        top: 20px;
+
+        font-size: 0.5em;
+    }
+
+    #iframe-youtube {
+        width:80%; height:170px;
+    }
+
+    #main-iframe-container {
+        height: 603px;width: 100%;
+    }
+
+    #main-body {
+        height: 603px;
+    }
+    #main-iframe {
+        height: 603px;width: 100%;
+    }
+
+}
+
+/*---------------------On Extra Small Size Devices / Phones (<768px)--------------------*/
+@media (max-width: 767px) {
+    body {
+        max-width: 700px;
+    }
+
+    #google_translate_element {
+        right: 65%;
+    }
+
+    #bb {
+        width:100%;
+        height:200px;
+    }
+
+    #iframe-youtube {
+        width:100%; height:150px;
+    }
+
+    #main-iframe {
+        width:100%;height: 535px;
+    }
+
+    #email {
+        width: 65%;
+    }
+    #mc-embedded-subscribe, #email{
+        display: inline;
+
+    }
+
+    #main-iframe-container {
+        height: 535px;
+    }
+
+    #main-body {
+        height: 535px;
+    }
+    #iframe-youtube {
+        width:80%; height:150px;
+    }
+    #presentation
+    {
+        /*margin-left: 15%;*/
+        background-color: rgba(0,0,0,0.1);
+        /* width: 25%;
+         margin-top: 80px;*/
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        top: 200px;
+
+        font-size: 0.5em;
+    }
+
+    #main-example {
+        font-size: 20px;
+    }
+
+    #newsletter-paragraph {
+        font-size: 2em;
+    }
+}
+
+/*---- Positioning with Great Precision Dark Bar Menu Content and Other Items---------(Temporarily for dark bar)*/
+@media (min-width: 769px) and (max-width: 842px) {
+
+}
+@media (min-width: 843px) and (max-width: 918px) {
+
+}
+@media (min-width: 919px) and (max-width: 992px) {
+
+}
+@media (min-width: 993px) and (max-width: 1068px) {
+
+}
+@media (min-width: 1069px) and (max-width: 1143px) {
+
+}
+@media (min-width: 1144px) and (max-width: 1219px) {
+
+}
+@media (min-width: 1220px) and (max-width: 1295px) {
+
+}
+@media (min-width: 1296px) and (max-width: 1295px) {
+
+}
+
+
+
+

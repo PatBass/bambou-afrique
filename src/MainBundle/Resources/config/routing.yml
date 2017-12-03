@@ -1,0 +1,14 @@
+main_homepage:
+    resource: "@MainBundle/Controller/MainController.php"
+    prefix:    /
+    type:      annotation
+
+main_nakevote:
+    resource: "@MainBundle/Controller/ExtraController.php"
+    prefix:    /
+    type:      annotation
+
+
+
+
+

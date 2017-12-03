@@ -1,0 +1,255 @@
+{% extends "::Layout/layout.html.twig" %}
+{% block stylesheets %}
+    <!-- Custom CSS -->
+    <link href="{{ asset('bundles/main/css/contact-form.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block body %}
+    {% include('MainBundle:Common:header.html.twig') with {'active':'contact'} %}
+    <!--========================================================
+                           CONTENT
+ =========================================================-->
+
+    <main>
+
+        <section>
+            <div class="map map_height1">
+                <div id="google-map" class="map_model" data-zoom="11"></div>
+                <ul class="map_locations">
+                    <li data-x="2.201627" data-y="48.866667" data-basic="{{ asset('bundles/main/images/gmap_marker.png') }}" data-active="{{ asset('bundles/main/images/gmap_marker_active.png') }}">
+                        <div class="location">
+                            <h3 class="txt-clr1">
+                                FONDATION
+                                <small>
+                                    O'DELLYA
+                                </small>
+                            </h3>
+                            <address>
+                                <dl>
+                                    <dt>Téléphone: </dt>
+                                    <dd class="phone"><a href="callto:#"> +33 7 81 01 72 30</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>Adresse: </dt>
+                                    <dd> 12 Boulevard Aristide Briand Suresnes  France</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Heures: </dt>
+                                    <dd> 7h-18h en semaine ; &nbsp;&nbsp;  toute la journée, les weekends</dd>
+                                </dl>
+                                <dl>
+                                    <dt> E-mail: </dt>
+                                    <dd><a href="mailto:#">contact@odellya.org</a></dd>
+                                </dl>
+                            </address>
+
+                        </div>
+                    </li>
+                    <!-- <li data-x="-74.100000" data-y="40.643180" data-basic="{{ asset('bundles/main/images/gmap_marker2.png') }}" data-active="{{ asset('bundles/main/images/gmap_marker2_active.png') }}">
+                <div class="location">
+                    <h3 class="txt-clr1">
+                        flooring
+                        <small>
+                            RETAILER
+                        </small>
+                    </h3>
+                    <address>
+                        <dl>
+                            <dt>Free phone: </dt>
+                            <dd class="phone"><a href="callto:#"> 800-2345-6789</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>Address: </dt>
+                            <dd> 4578 Marmora Road,Glasgow D04 89GR</dd>
+                        </dl>
+                        <dl>
+                            <dt>Hours: </dt>
+                            <dd> 6am-4pm PST M-Th; &nbsp;&nbsp;  6am-3pm PST Fri</dd>
+                        </dl>
+                        <dl>
+                            <dt> E-mail: </dt>
+                            <dd><a href="mailto:#">info@demolink.org</a></dd>
+                        </dl>
+                    </address>
+
+                </div>
+            </li>
+            <li data-x="-73.8854068" data-y="40.693180" data-basic="{{ asset('bundles/main/images/gmap_marker3.png') }}" data-active="{{ asset('bundles/main/images/gmap_marker3_active.png') }}">
+                <div class="location">
+                    <h3 class="txt-clr1">
+                        flooring
+                        <small>
+                            RETAILER
+                        </small>
+                    </h3>
+                    <address>
+                        <dl>
+                            <dt>Free phone: </dt>
+                            <dd class="phone"><a href="callto:#"> 800-2345-6789</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>Address: </dt>
+                            <dd> 4578 Marmora Road,Glasgow D04 89GR</dd>
+                        </dl>
+                        <dl>
+                            <dt>Hours: </dt>
+                            <dd> 6am-4pm PST M-Th; &nbsp;&nbsp;  6am-3pm PST Fri</dd>
+                        </dl>
+                        <dl>
+                            <dt> E-mail: </dt>
+                            <dd><a href="mailto:#">info@demolink.org</a></dd>
+                        </dl>
+                    </address>
+
+                </div>
+            </li>
+            <li data-x="-73.7874068" data-y="40.613180" data-basic="{{ asset('bundles/main/images/gmap_marker4.png') }}" data-active="{{ asset('bundles/main/images/gmap_marker4_active.png') }}">
+                <div class="location">
+                    <h3 class="txt-clr1">
+                        flooring
+                        <small>
+                            RETAILER
+                        </small>
+                    </h3>
+                    <address>
+                        <dl>
+                            <dt>Free phone: </dt>
+                            <dd class="phone"><a href="callto:#"> 800-2345-6789</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>Address: </dt>
+                            <dd> 4578 Marmora Road,Glasgow D04 89GR</dd>
+                        </dl>
+                        <dl>
+                            <dt>Hours: </dt>
+                            <dd> 6am-4pm PST M-Th; &nbsp;&nbsp;  6am-3pm PST Fri</dd>
+                        </dl>
+                        <dl>
+                            <dt> E-mail: </dt>
+                            <dd><a href="mailto:#">info@demolink.org</a></dd>
+                        </dl>
+                    </address>
+
+                </div>
+            </li>
+            <li data-x="-74.200000" data-y="40.683180" data-basic="{{ asset('bundles/main/images/gmap_marker5.png') }}" data-active="{{ asset('bundles/main/images/gmap_marker5_active.png') }}">
+                <div class="location">
+                    <h3 class="txt-clr1">
+                        flooring
+                        <small>
+                            RETAILER
+                        </small>
+                    </h3>
+                    <address>
+                        <dl>
+                            <dt>Free phone: </dt>
+                            <dd class="phone"><a href="callto:#"> 800-2345-6789</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>Address: </dt>
+                            <dd> 4578 Marmora Road,Glasgow D04 89GR</dd>
+                        </dl>
+                        <dl>
+                            <dt>Hours: </dt>
+                            <dd> 6am-4pm PST M-Th; &nbsp;&nbsp;  6am-3pm PST Fri</dd>
+                        </dl>
+                        <dl>
+                            <dt> E-mail: </dt>
+                            <dd><a href="mailto:#">info@demolink.org</a></dd>
+                        </dl>
+                    </address>
+
+                </div>
+            </li> -->
+                </ul>
+            </div>
+        </section>
+
+        <section class="well well4" style="border: none;">
+            <div class="container">
+
+                <h2 class="txt-pr">
+                    Formulaire
+                    <span style="color:#21c2f8;font-weight:200;">
+                        de contact
+                    </span>
+                </h2>
+                <div class="row">
+                    <div class="well">
+
+                        <p>
+                            <span class="label label-warning">N.B</span>
+                            La Fondation n'est pas qu'un simple collectif des passionnés des NTIC, c'est un mouvement qui se donne pour objectif de convaincre les dirigeants congolais de numériser les institutions et administrations publiques du Congo par l'adoption du Pacte technologique. Cela étant, celui ou celle qui souhaite adhérer doit pouvoir répondre à la question de son apport quant à l'atteinte de de cet objectif, et de là découlera automatiquement son rôle et son occupation comme membre actif de la Fondation.
+                        </p>
+                    </div>
+                </div>
+                {{ form_start(form, {'attr': {'class': 'contact-form', 'action':'contactAction', 'method':'POST', 'id':'contact-form'}}) }}
+                    <div class="contact-form-loader"></div>
+                    <fieldset>
+                        <label class="name">
+                            {{ form_widget(form.name, {'attr': {'data-constraints': '@Required @JustLetters', 'placeholder':'Name:'}}) }}
+                            <span class="error-message">{{ form_errors(form.name) }}</span>
+                        </label>
+
+                        <label class="phone">
+                            {{ form_widget(form.phone, {'attr': {'data-constraints': '@Required @JustLetters', 'placeholder':'Phone:'}}) }}
+                            <span class="error-message">{{ form_errors(form.phone) }}</span>
+                        </label>
+
+                        <label class="email">
+                            {{ form_widget(form.email, {'attr': {'data-constraints': '@Required @Email', 'placeholder':'Email:'}}) }}
+                            <span class="error-message">{{ form_errors(form.email) }}</span>
+                        </label>
+
+                        <label class="message">
+                            {{ form_widget(form.message, {'attr': {'data-constraints': '@Required @Length(min=20,max=999999)', 'placeholder':'Message'}}) }}
+                            <span class="error-message">{{ form_errors(form.message) }}</span>
+                        </label>
+
+                        <label class="recaptcha">
+                            <div class="g-recaptcha" data-sitekey="6LdICQcUAAAAAMKjB3Cet82jKHwb_4S-ms8Wz-iE"></div>
+                        </label>
+
+                        <div class="btn-wr text-primary">
+                            <button class="btn btn-primary"  type="submit">Envoyer</button>
+                        </div>
+                    </fieldset>
+                    <div class="modal fade response-message">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                        &times;
+                                    </button>
+                                    <h4 class="modal-title">Modal title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    {% for message in app.session.flashbag.get('notice') %}
+                                        {{ message }}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{ form_rest(form) }}
+                {{ form_end(form) }}
+
+
+            </div>
+        </section>
+
+
+
+    </main>
+    {% include('MainBundle:Common:footer.html.twig') %}
+{% endblock %}
+{% block javascripts %}
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJeCYd7WriRsWWMvsS7ygyndMCBWnGvKc"
+            type="text/javascript"></script>
+
+
+{% endblock %}
+
+
+
+
