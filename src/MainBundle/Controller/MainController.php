@@ -17,7 +17,7 @@ use Symfony\Component\HttpFoundation\Request;
 class MainController extends Controller
 {
     /**
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return \Symfony\Component\HttpFoundation\Response represents an HTTP response
      * @Route ("/", name="home")
      *
      */
@@ -28,59 +28,78 @@ class MainController extends Controller
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route ("/index", name="index")
-     *
-     */
-    public function indexAction()
-    {
-        return $this->render('MainBundle:Main:index.html.twig');
-    }
-
-    /**
-     * @return \Symfony\Component\HttpFoundation\Response
-     * @Route ("/index-1", name="index-1")
+     * @Route ("/Bamboudafrique-Casablanca", name="index1")
      *
      */
     public function index1Action()
     {
-        $contact = new Contact();
-        $form = $this->createCreateForm($contact);
+        $productsList = $this
+            ->getDoctrine()
+            ->getRepository('MainBundle:Product')
+            ->findAll()
+        ;
 
-        return $this->render('MainBundle:Main:index-1.html.twig');
+        return $this->render('MainBundle:Main:index-1.html.twig', array(
+            'productsList' => $productsList
+        ));
 
     }
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route ("/index-2", name="index-2")
+     * @Route ("/Bamboudafrique-Casablanca/Mon-compte", name="account")
      *
      */
-    public function index2Action()
+    public function accountAction()
     {
-        $contact = new Contact();
-        $form = $this->createCreateForm($contact);
 
-        return $this->render('MainBundle:Main:index-2.html.twig');
+        return $this->render('MainBundle:Main:account.html.twig');
 
     }
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route ("/event", name="event")
+     * @Route ("/Bamboudafrique-Casablanca/le-mets", name="single")
      *
      */
-    public function eventAction()
+    public function singleAction()
     {
-        $contact = new Contact();
-        $form = $this->createCreateForm($contact);
 
-        return $this->render('MainBundle:Main:event.html.twig');
+        return $this->render('MainBundle:Main:single.html.twig');
 
     }
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route ("/contact", name="contact")
+     * @Route ("/Bamboudafrique-Casablanca/Specialite/{category}", name="speciality")
+     *
+     */
+    public function specialityAction(Request $request, $category)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $productsList = $em->getRepository('MainBundle:Product')->findAll();
+
+        $finalProductsList = [];
+
+        foreach ($productsList as $product ) {
+            foreach ($product->getCategories() as $cat) {
+                if ($cat === $category) {
+                    $finalProductsList[] = $product;
+                }
+            }
+
+        }
+
+
+        return $this->render('MainBundle:Main:'.$category.'.html.twig', array(
+            'finalProductsList' => $finalProductsList
+        ));
+
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route ("/Bamboudafrique-Casablanca/contact", name="contact")
      *
      */
     public function contactAction(Request $request)
@@ -202,41 +221,36 @@ class MainController extends Controller
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route ("/index", name="equipe")
+     * @Route ("/Bamboudafrique-Casablanca/login", name="login")
      *
      */
-    public function equipeAction()
+    public function loginAction()
     {
 
-        return $this->render('MainBundle:Main:index.html.twig');
+        return $this->render('MainBundle:Main:login.html.twig');
 
     }
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route ("/index", name="mot")
+     * @Route ("/Bamboudafrique-Casablanca/La-commande", name="checkout")
      *
      */
-    public function motAction($id)
+    public function checkoutAction()
     {
 
-        return $this->render('MainBundle:Main:index.html.twig', array(
-            'id' => $id
-        ));
+        return $this->render('MainBundle:Main:checkout.html.twig');
 
     }
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route ("/index-5", name="index-5")
+     * @Route ("/Bamboudafrique-Casablanca/A-propos-de-Bambou-d-Afrique", name="about")
      *
      */
-    public function index5Action()
+    public function aboutAction()
     {
-        $contact = new Contact();
-        $form = $this->createCreateForm($contact);
-
-        return $this->render('MainBundle:Main:index-5.html.twig');
+        return $this->render('MainBundle:Main:about.html.twig');
 
     }
 
@@ -358,6 +372,15 @@ class MainController extends Controller
             "name" => $name,
             "translated" => $translated
         ));
+    }
+
+    /**
+     * @Route ("/Bamboudafrique-Casablanca/Galerie", name="galery")
+     */
+    public function galeryaction()
+    {
+
+        return $this->render("MainBundle:Main:galery.html.twig");
     }
 
 }

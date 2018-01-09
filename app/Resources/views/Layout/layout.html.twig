@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>{% block title %}Fondation Odellya{% endblock %}</title>
+    <title>{% block title %}Bambou d'Afrique{% endblock %}</title>
 
     {% block stylesheets %}{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -38,6 +38,14 @@
     <!-- Custom Fonts -->
     <link href="{{ asset('bundles/main/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald:400,300&amp;subset=latin">
+    <link href="//fonts.googleapis.com/css?family=Squada+One" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
     {# {% stylesheets 'bundles/main/css/*' filter="cssrewrite" combine=true %}
         <link rel="stylesheet" href="{{ asset_url }}" />
@@ -54,13 +62,32 @@
     <!-- jQuery -->
     <script src="{{ asset('bundles/main/js/jquery.js') }}"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    {#<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>#}
+    <!-- bower:js -->
 
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-
-    {#<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>#}
+    <script src="{{ asset('components/modernizr/modernizr.js') }}"></script>
+    <script src="{{ asset('components/jquery/jquery.js') }}"></script>
+    <script src="{{ asset('components/bower-foundation-datepicker/foundation-datepicker.min.js') }}"></script>
+    <script src="{{ asset('components/fastclick/lib/fastclick.js') }}"></script>
+    <script src="{{ asset('components/momentjs/moment.js') }}"></script>
+    <script src="{{ asset('components/jquery-placeholder/jquery.placeholder.js') }}"></script>
+    <script src="{{ asset('components/components-foundation/js/foundation.js') }}"></script>
+    <script src="{{ asset('components/jquery-form/jquery.form.js') }}"></script>
+    <script src="{{ asset('components/jquery.dotdotdot/src/js/jquery.dotdotdot.js') }}"></script>
+    <script src="{{ asset('components/jquery.cookie/jquery.cookie.js') }}"></script>
+    <script src="{{ asset('components/jquery.equalheights/jquery.equalheights.js') }}"></script>
+    <script src="{{ asset('components/raphael/raphael.js') }}"></script>
+    <script src="{{ asset('components/morrisjs/morris.js') }}"></script>
+    <script src="{{ asset('components/bootstrap/js/collapse.js') }}"></script>
+    <!-- endbower -->
+    <script src="{{ asset('components/jquery-maskedinput/dist/jquery.maskedinput.min.js') }}"></script>
+    <script src="{{ asset('components/jquery-simplecolorpicker/jquery.simplecolorpicker.js') }}"></script>
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <!--<script src="{#{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}#}"></script>-->
+    <script src="{{ asset('lib/jquery-ui.js') }}"></script>
+    <script src="{{ asset('lib/datepicker.fr.js') }}"></script>
+    <script src="{{ asset('lib/redactor/redactor.min.js') }}"></script>
+    <script src="{{ asset('lib/chosen/chosen.jquery.min.js') }}"></script>
+    <script src="{{ asset('js/all.js') }}"></script>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -84,6 +111,31 @@
     <script src="{{ asset('bundles/main/js/TMSearch.js') }}"></script>
     <script src="{{ asset('bundles/main/js/jquery.rd-parallax.js') }}"></script>
     <script src="{{ asset('bundles/main/js/jquery-scrolltofixed-min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/move-top.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/easing.js') }}"></script>
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <script src="{{ asset('js/jquery.wmuSlider.js') }}"></script>
+    <script>
+        $("span.menu").click(function(){
+            $(".top-nav ul").slideToggle(500, function(){
+            });
+        });
+    </script>
+    <script>
+        $('.example1').wmuSlider({
+            pagination : false
+        });
+    </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -106,6 +158,41 @@
             $('[data-toggle="popover"]').popover();
         });
     </script>
+
+    <script type="text/javascript" src="{{ asset('js/move-top.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/easing.js') }}"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+
+    <script>
+        $("span.menu").click(function(){
+            $(".top-nav ul").slideToggle(500, function(){
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+             var defaults = {
+             containerID: 'toTop', // fading element id
+             containerHoverID: 'toTopHover', // fading element hover id
+             scrollSpeed: 1200,
+             easingType: 'linear'
+             };
+             */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+
     {% block javascripts %}{% endblock %}
 </body>
 </html>

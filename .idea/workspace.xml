@@ -1,7 +1,231 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0f4ac8b-5755-492d-87a5-4221610bebf7" name="Default" comment="" />
+    <list default="true" id="d0f4ac8b-5755-492d-87a5-4221610bebf7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/14.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/16.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/18.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/19.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/20.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/21.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/22.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/23.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/24.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/25.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/26.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/26.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images_uploads/27.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/config/functions.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/config/vars.scss" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/AppBundle.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/DefaultControllerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Entity/Application-bkp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Entity/Image-bkp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Entity/Image.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Entity/Title.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Repository/ImageRepository-bkp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Repository/ImageRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Repository/TitleRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Application.orm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Application.orm.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Choix.orm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Choix.orm.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Contact.orm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Contact.orm.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Image.orm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Title.orm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/animate.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/camera.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/contact-form.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/google-map.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/jquery.fancybox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/media.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/alerts.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/background-variant.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/border-radius.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/buttons.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/center-block.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/clearfix.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/forms.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/gradients.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/grid-framework.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/grid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/hide-text.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/image.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/labels.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/list-group.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/nav-divider.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/nav-vertical-align.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/opacity.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/pagination.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/panels.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/progress-bar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/reset-filter.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/resize.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/responsive-visibility.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/size.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/tab-focus.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/table-row.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/text-emphasis.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/text-overflow.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/vendor-prefixes.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/normalize.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/owl-carousel.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/print.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/responsive-embed.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/search.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/subscribe-form.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/svg-icons.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/thumbnails.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/tm_panel.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/variables.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/Brony.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/Odellya-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/Odellya-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/Odellya-8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/Odellya-9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/Patrick.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/Rose-Marie.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/camera-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/chrisbel.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/egouv-maroc.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/facebook-48circle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/facebook-48gray-circle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/facebook-hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/fancybox_loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/fancybox_loading@2x.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/fancybox_overlay.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/fancybox_sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/fancybox_sprite@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/flag-fr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/flag-us.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/fr-flag.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/ga-using-digital-technology-to-improve-gabons-health-care-780x439.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/gmap_marker.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/gmap_marker2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/gmap_marker2_active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/gmap_marker3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/gmap_marker3_active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/gmap_marker4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/gmap_marker4_active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/gmap_marker5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/gmap_marker5_active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/gmap_marker_active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/ie8-panel/warning_bar_0000_us.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/images (1).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/le-tout-numerique.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/logo (1).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/numerique.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/numerique2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/numerique3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_img10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_img11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_img12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_img13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_img14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_img4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_img5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_img6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_img7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_img8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_img9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_slide1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_slide2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-1_slide3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-2_img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-2_img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-2_img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-2_img4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-2_img5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-2_img6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-3_img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-3_img1_original.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-3_img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-3_img2_original.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-3_img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-3_img3_original.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-3_img4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-3_img5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-3_img6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-3_img7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-4_img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-4_img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-4_img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-4_img4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-4_img5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-4_img6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/page-4_img7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/parallax1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/parallax2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/presidentielle2016.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/reuters-google-592x296.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/rwanda-numerisation-administration.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/select.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/senatrice.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/senetrice.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/thumb-up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/twitter-48circle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/us-flag.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/youtube-icon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/youtube-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/youtube-icon2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/youtube-icon3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/Odellya-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/Odellya-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/Odellya-8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/Odellya-9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/facebook-48circle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/facebook-48gray-circle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/facebook-hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/flag-fr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/flag-us.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/fr-flag.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/images (1).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/logo (1)-Backup.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/twitter-48circle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/us-flag.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/youtube-icon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/youtube-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/youtube-icon2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/youtube-icon3.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/styleOLD.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/favicon.ico" afterPath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/logo.png" afterPath="$PROJECT_DIR$/src/MainBundle/Resources/public/images/logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainBundle/Entity/Choix.php" afterPath="$PROJECT_DIR$/src/MainBundle/Entity/Choix.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainBundle/Controller/MainController.php" afterPath="$PROJECT_DIR$/src/MainBundle/Controller/MainController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/contact.html.twig" afterPath="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/contact.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/logs/dev.log" afterPath="$PROJECT_DIR$/app/logs/dev.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/views/Common/footer.html.twig" afterPath="$PROJECT_DIR$/src/MainBundle/Resources/views/Common/footer.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/views/Common/header.html.twig" afterPath="$PROJECT_DIR$/src/MainBundle/Resources/views/Common/header.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/home.html.twig" afterPath="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/home.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index-1.html.twig" afterPath="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index-1.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/Layout/layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/Layout/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/odellya.iml" afterPath="$PROJECT_DIR$/.idea/odellya.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/parameters.yml.dist" afterPath="$PROJECT_DIR$/app/config/parameters.yml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/parameters.yml" afterPath="$PROJECT_DIR$/app/config/parameters.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/logs/prod.log" afterPath="$PROJECT_DIR$/app/logs/prod.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/MainBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/MainBundle/Resources/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="odellya.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -25,95 +249,108 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="home.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/home.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1500">
+              <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index-1.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index-1.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.0833335" vertical-offset="28" max-vertical-offset="780">
+              <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index-2.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index-2.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3090">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#12#37#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index-5.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index-5.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1110">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#12#37#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="liste.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/liste.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.024311183" vertical-offset="120" max-vertical-offset="1440">
+              <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="5160">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#12#37#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Common/header.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="810">
+              <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+              <folding>
+                <element signature="e#359#365#0#Twig" expanded="false" />
+                <element signature="e#589#596#0#Twig" expanded="false" />
+                <element signature="e#1293#1301#0#Twig" expanded="false" />
+                <element signature="e#1640#1646#0#Twig" expanded="false" />
+                <element signature="e#1737#1747#0#Twig" expanded="false" />
+                <element signature="e#1862#1868#0#Twig" expanded="false" />
+                <element signature="e#1957#1962#0#Twig" expanded="false" />
+                <element signature="e#2052#2059#0#Twig" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/config/routing.yml">
+        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="300">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testing.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testing.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
               <folding>
-                <element signature="e#6#83#0#PHP" expanded="false" />
+                <marker date="1515519050000" expanded="true" signature="577:701" placeholder="fos_user_change_password:" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Image.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MainBundle/Entity/Image.php">
+      <file leaf-file-name="security.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/security.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="2715">
-              <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact_form.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/contact_form.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/contact.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.6871961" vertical-offset="2604" max-vertical-offset="3915">
-              <caret line="243" column="14" selection-start-line="243" selection-start-column="14" selection-end-line="243" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app_dev.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app_dev.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#7#52#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/ruflin/elastica/lib/Elastica/Index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4319" max-vertical-offset="7785">
-              <caret line="305" column="33" selection-start-line="305" selection-start-column="26" selection-end-line="305" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="651" max-vertical-offset="1890">
-              <caret line="57" column="22" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parameters.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="345">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="184" max-vertical-offset="870">
+              <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -149,57 +386,73 @@
       <command text="s doctrine:database:create" />
     </commandsHistory>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/css/style.css" />
-        <option value="$PROJECT_DIR$/web/carousel/carousel.html" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index.html" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index1.html.twig" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index-1.html.twig" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index-2.html.twig" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index-5.html.twig" />
-        <option value="$PROJECT_DIR$/web/carousel/engine1/style.css" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/public/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Common/footer.html.twig" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index-4.html.twig" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Form/ContactType.php" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/public/css/tm_docs.css" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index-3.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/Layout/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/public/css/svg-icons.css" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/src/MainBundle/Resources/public/css/style.css" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/contact.html.twig" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Common/header.html.twig" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Entity/Application .php" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Application.orm.xml" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Form/TitleType.php" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Entity/Title.php" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Title.orm.xml" />
-        <option value="$PROJECT_DIR$/src/MainBundle/DataFixtures/ORM/LoadTitle.php" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Entity/Application.php" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Form/ImageType.php" />
-        <option value="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/File/UploadedFile.php" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Image.orm.xml" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Form/ApplicationType.php" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/public/css/contact-form.css" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/config/validation.xml" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/home.html.twig" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/application.html.twig" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/gallerie_brunch_dominical.html" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/event.html.twig" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Controller/MainController.php" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Common/footer.html.twig" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Common/banner.html.twig" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Entity/Products.php" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Repository/ProductRepository.php" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Repository/CategoryRepository.php" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Repository/ImageRepository.php" />
+        <option value="$PROJECT_DIR$/web/css/style.css" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/account.html.twig" />
         <option value="$PROJECT_DIR$/src/MainBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/MainBundle/Controller/Api/ProgrammerController.php" />
-        <option value="$PROJECT_DIR$/testing.php" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Form/ProductType.php" />
         <option value="$PROJECT_DIR$/src/MainBundle/Entity/Image.php" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Controller/TestController.php" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/home.html.twig" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Entity/Category.php" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Entity/Product.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Layout/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/speciality.html.twig" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/africaine.html.twig" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/about.html.twig" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/liste.html.twig" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/single.html.twig" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index-1.html.twig" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/galery.html.twig" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Controller/MainController.php" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Main/contact.html.twig" />
+        <option value="$PROJECT_DIR$/web/bundles/main/css/style.css" />
+        <option value="$PROJECT_DIR$/composer.lock" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/UserBundle.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Form/Type/RegistrationFormType.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Entity/Address.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Validator/Constraints/isPhoneNumber.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Validator/Constraints/isPhoneNumberValidator.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Services/MailingService.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Listeners/RegistrationListener.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Form/Type/AddressType.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Form/Model/DatePickerType.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Form/Model/ColorPickerType.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Form/Type/ProfileFormType.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Form/Type/UserType.php" />
+        <option value="$PROJECT_DIR$/src/MainBundle/Resources/views/Common/header.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
       </list>
     </option>
+  </component>
+  <component name="JsGruntFileManager">
+    <gruntfiles>
+      <GruntfileState>
+        <gruntfile-path>$PROJECT_DIR$/Gruntfile.js</gruntfile-path>
+      </GruntfileState>
+    </gruntfiles>
+    <initial>false</initial>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
@@ -210,7 +463,7 @@
     <option name="width" value="1280" />
     <option name="height" value="738" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -247,7 +500,147 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="bambou-afrique" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="odellya" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bambou-afrique" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="odellya" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bambou-afrique" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MainBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="odellya" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bambou-afrique" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MainBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="odellya" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bambou-afrique" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MainBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="odellya" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bambou-afrique" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MainBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="odellya" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bambou-afrique" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MainBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -258,24 +651,26 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../edale-uk-management" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../afmp" />
     <property name="FullScreen" value="false" />
     <property name="options.lastSelected" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="Index&#9;null&#9;null&#10;uplo&#9;FILE&#9;file:///Applications/MAMP/htdocs/odellya/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/File/UploadedFile.php&#10;uploadedfile&#9;null&#9;null&#10;Proxy&#9;null&#9;null&#10;query.ui.totop.js&#9;FILE&#9;file:///Applications/MAMP/htdocs/odellya/src/MainBundle/Resources/public/js/jquery.ui.totop.js" />
+    <property name="SearchEverywhereHistoryKey" value="bower&#9;FILE&#9;file:///Applications/MAMP/htdocs/bambou-afrique/node_modules/coffee-script/bower.json&#10;Index&#9;null&#9;null&#10;uplo&#9;FILE&#9;file:///Applications/MAMP/htdocs/odellya/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/File/UploadedFile.php&#10;uploadedfile&#9;null&#9;null&#10;Proxy&#9;null&#9;null&#10;query.ui.totop.js&#9;FILE&#9;file:///Applications/MAMP/htdocs/odellya/src/MainBundle/Resources/public/js/jquery.ui.totop.js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/UserBundle/Form/Type" />
+      <recent name="$PROJECT_DIR$/src/UserBundle" />
+      <recent name="$PROJECT_DIR$/src/UserBundle/Entity" />
+      <recent name="$PROJECT_DIR$/web/bundles/main/images" />
       <recent name="$PROJECT_DIR$/src/MainBundle/Form" />
-      <recent name="$PROJECT_DIR$/src/MainBundle/Resources/views/Main" />
-      <recent name="$PROJECT_DIR$/src/MainBundle/Resources/public/images" />
-      <recent name="$PROJECT_DIR$/src/MainBundle/Resources/public/css" />
-      <recent name="$PROJECT_DIR$/src/MainBundle/Resources/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/UserBundle/Form/Type" />
+      <recent name="$PROJECT_DIR$/web/bundles/main/images" />
       <recent name="$PROJECT_DIR$/web/gallery/" />
       <recent name="$PROJECT_DIR$/src/MainBundle/Resources/public/images" />
       <recent name="$PROJECT_DIR$/web/carousel/data1/images" />
@@ -324,8 +719,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="738" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -339,8 +735,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298351" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -371,164 +767,31 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Repository/ProductRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="345">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="285">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/Layout/layout.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Repository/CategoryRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="839" max-vertical-offset="1755">
-          <caret line="82" column="65" selection-start-line="82" selection-start-column="65" selection-end-line="82" selection-end-column="65" />
+        <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="315">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/background-variant.css">
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Repository/ImageRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="315">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/border-radius.css">
+    <entry file="file://$PROJECT_DIR$/web/css/styleOLD.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/public/css/svg-icons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/buttons.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/responsive-visibility.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/public/css/mixins/pagination.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5091" max-vertical-offset="8745">
-          <caret line="358" column="41" selection-start-line="358" selection-start-column="41" selection-end-line="358" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/logo (1)-Backup.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Common/footer.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.25" vertical-offset="0" max-vertical-offset="2625">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/main/images/gmap_marker2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/main/images/gmap_marker.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/main/images/gmap_marker_active.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Repository/ImageRepository-bkp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/MainBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Entity/Image-bkp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Entity/Application-bkp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="915" max-vertical-offset="1545">
-          <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Form/ApplicationType-bkp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="855">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Form/TitleType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="630">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Entity/Title.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="915">
-          <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Title.orm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/DataFixtures/ORM/LoadTitle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="480">
-          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Application.orm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="7230">
+          <caret line="34" column="1" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -539,200 +802,443 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Form/ImageType.php">
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/application.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="600">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state vertical-scroll-proportion="-8.791667" vertical-offset="2894" max-vertical-offset="5055">
+          <caret line="207" column="59" selection-start-line="207" selection-start-column="59" selection-end-line="207" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Form/ApplicationType.php">
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="185" max-vertical-offset="825">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="641">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Entity/Application.php">
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Entity/Image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4019" max-vertical-offset="4920">
-          <caret line="281" column="24" selection-start-line="281" selection-start-column="20" selection-end-line="281" selection-end-column="24" />
+        <state vertical-scroll-proportion="-3.9215686" vertical-offset="2350" max-vertical-offset="2940">
+          <caret line="170" column="47" selection-start-line="170" selection-start-column="47" selection-end-line="170" selection-end-column="47" />
+          <folding>
+            <element signature="e#37#69#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/public/css/contact-form.css">
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="5445">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        <state vertical-scroll-proportion="-7.5555553" vertical-offset="3576" max-vertical-offset="26070">
+          <caret line="252" column="12" selection-start-line="252" selection-start-column="10" selection-end-line="252" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Image.orm.xml">
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/checkout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/config/doctrine/Application.orm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/config/validation.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Common/header.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1080">
-          <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/home.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1875">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="5160">
-          <caret line="13" column="79" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/gallery/gallerie_brunch_dominical.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="643">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="641">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/application.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/account.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2685" max-vertical-offset="5055">
-          <caret line="196" column="48" selection-start-line="196" selection-start-column="48" selection-end-line="196" selection-end-column="48" />
+        <state vertical-scroll-proportion="-4.8333335" vertical-offset="124" max-vertical-offset="765">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/event.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1965" max-vertical-offset="2820">
-          <caret line="153" column="49" selection-start-line="153" selection-start-column="49" selection-end-line="153" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="641">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Form/ProductType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="810">
-          <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="184" max-vertical-offset="825">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Entity/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="658" max-vertical-offset="1770">
+          <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Entity/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="584" max-vertical-offset="6165">
+          <caret line="59" column="106" selection-start-line="59" selection-start-column="106" selection-end-line="59" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Controller/TestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.083334" vertical-offset="2023" max-vertical-offset="2655">
+          <caret line="172" column="56" selection-start-line="172" selection-start-column="56" selection-end-line="172" selection-end-column="56" />
+          <folding>
+            <element signature="e#119#150#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Layout/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.27451" vertical-offset="2470" max-vertical-offset="3060">
+          <caret line="186" column="20" selection-start-line="186" selection-start-column="13" selection-end-line="186" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/single.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6470587" vertical-offset="0" max-vertical-offset="1860">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/africaine.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375" vertical-offset="45" max-vertical-offset="2370">
+          <caret line="10" column="54" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/galery.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="300">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1515432707000" expanded="true" signature="-1:-1" placeholder="{% block body ...%}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Controller/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1568627" vertical-offset="4285" max-vertical-offset="4875">
+          <caret line="377" column="42" selection-start-line="377" selection-start-column="42" selection-end-line="377" selection-end-column="42" />
+          <folding>
+            <element signature="e#41#75#0#PHP" expanded="true" />
+            <element signature="e#1158#1193#0#PHP" expanded="true" />
+            <element signature="e#1757#1791#1#PHP" expanded="true" />
+            <element signature="e#2134#2154#1#PHP" expanded="true" />
+            <element signature="e#4176#4211#0#PHP" expanded="true" />
+            <element signature="e#4415#7398#0#PHP" expanded="false" />
+            <element signature="e#5797#5836#0#PHP" expanded="true" />
+            <element signature="e#7291#7330#0#PHP" expanded="true" />
+            <element signature="e#7616#7649#1#PHP" expanded="true" />
+            <element signature="e#7888#7924#1#PHP" expanded="true" />
+            <element signature="e#8173#8206#1#PHP" expanded="true" />
+            <element signature="e#8393#8402#1#PHP" expanded="true" />
+            <element signature="e#8829#8867#0#PHP" expanded="true" />
+            <element signature="e#9601#9607#1#PHP" expanded="true" />
+            <element signature="e#11381#11429#0#PHP" expanded="true" />
+            <element signature="e#11754#11793#0#PHP" expanded="true" />
+            <element signature="e#12045#12079#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/about.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0833335" vertical-offset="13" max-vertical-offset="630">
+          <caret line="9" column="54" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#article#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#article#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#article#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1515432366000" expanded="true" signature="-1:-1" placeholder="{% block body ...%}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/contact.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.083333" vertical-offset="283" max-vertical-offset="900">
+          <caret line="43" column="104" selection-start-line="43" selection-start-column="104" selection-end-line="43" selection-end-column="104" />
+          <folding>
+            <element signature="e#12#37#0#Twig" expanded="false" />
+            <element signature="e#134#168#0#Twig" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#2512#2546#0#Twig" expanded="false" />
+            <marker date="1515435462000" expanded="true" signature="-1:-1" placeholder="{% block title ...%}" />
+            <marker date="1515435462000" expanded="true" signature="-1:-1" placeholder="{% block body ...%}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/main/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0" vertical-offset="10356" max-vertical-offset="42225">
+          <caret line="712" column="0" selection-start-line="712" selection-start-column="0" selection-end-line="712" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="194" max-vertical-offset="1170">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="49" />
+        <state vertical-scroll-proportion="-7.352941" vertical-offset="30" max-vertical-offset="1200">
+          <caret line="27" column="31" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/bootstrap.php.cache">
+    <entry file="file://$PROJECT_DIR$/composer.lock">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="42945">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-7.3508773" vertical-offset="7321" max-vertical-offset="51555">
+          <caret line="516" column="17" selection-start-line="516" selection-start-column="17" selection-end-line="516" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Controller/MainController.php">
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4274" max-vertical-offset="4950">
-          <caret line="304" column="0" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        <state vertical-scroll-proportion="-16.083334" vertical-offset="49" max-vertical-offset="825">
+          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/ruflin/elastica/lib/Elastica/Index.php">
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/UserBundle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4319" max-vertical-offset="7785">
-          <caret line="305" column="33" selection-start-line="305" selection-start-column="26" selection-end-line="305" selection-end-column="33" />
+        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="285">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="240">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#83#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="641">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#7#52#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="651" max-vertical-offset="1890">
-          <caret line="57" column="22" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1549" max-vertical-offset="2235">
+          <caret line="142" column="25" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Entity/Image.php">
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Form/Type/RegistrationFormType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="2715">
-          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+        <state vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="555">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding>
+            <element signature="e#40#88#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Entity/Address.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="135.54167" vertical-offset="3388" max-vertical-offset="4005">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/contact_form.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Form/Type/AddressType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="639">
+        <state vertical-scroll-proportion="-21.875" vertical-offset="795" max-vertical-offset="1470">
+          <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#80#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Form/Type/UserType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5559157" vertical-offset="0" max-vertical-offset="1095">
+          <caret line="64" column="27" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
+          <folding>
+            <element signature="e#35#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Listeners/RegistrationListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.003241491" vertical-offset="73" max-vertical-offset="690">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Services/MailingService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.095623985" vertical-offset="1" max-vertical-offset="8670">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#78#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Form/Model/ColorPickerType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19448946" vertical-offset="0" max-vertical-offset="1320">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Form/Model/DatePickerType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24311183" vertical-offset="0" max-vertical-offset="617">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.534846" vertical-offset="6255" max-vertical-offset="7845">
+          <caret line="439" column="7" selection-start-line="439" selection-start-column="7" selection-end-line="439" selection-end-column="7" />
+          <folding>
+            <element signature="e#37#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Validator/Constraints/isPhoneNumber.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.024311183" vertical-offset="0" max-vertical-offset="617">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#52#95#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Validator/Constraints/isPhoneNumberValidator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.048622366" vertical-offset="0" max-vertical-offset="617">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+          <folding>
+            <element signature="e#52#95#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Form/Type/ProfileFormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78119934" vertical-offset="328" max-vertical-offset="975">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="57" selection-end-column="5" />
+          <folding>
+            <element signature="e#45#102#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Common/header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="810">
+          <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+          <folding>
+            <element signature="e#359#365#0#Twig" expanded="false" />
+            <element signature="e#589#596#0#Twig" expanded="false" />
+            <element signature="e#1293#1301#0#Twig" expanded="false" />
+            <element signature="e#1640#1646#0#Twig" expanded="false" />
+            <element signature="e#1737#1747#0#Twig" expanded="false" />
+            <element signature="e#1862#1868#0#Twig" expanded="false" />
+            <element signature="e#1957#1962#0#Twig" expanded="false" />
+            <element signature="e#2052#2059#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <marker date="1515519050000" expanded="true" signature="577:701" placeholder="fos_user_change_password:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="184" max-vertical-offset="870">
+          <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="870">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5160">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#37#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index-1.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0833335" vertical-offset="28" max-vertical-offset="780">
+          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/contact.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index-2.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6871961" vertical-offset="2604" max-vertical-offset="3915">
-          <caret line="243" column="14" selection-start-line="243" selection-start-column="14" selection-end-line="243" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3090">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#37#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/index-5.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#37#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainBundle/Resources/views/Main/liste.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.024311183" vertical-offset="120" max-vertical-offset="1440">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
           <folding />
         </state>
       </provider>

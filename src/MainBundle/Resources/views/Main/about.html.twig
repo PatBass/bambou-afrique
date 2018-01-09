@@ -1,0 +1,36 @@
+{% extends "::Layout/layout.html.twig" %}
+{% block title %}{{ parent() }} - Casablanca{% endblock %}
+{% block body %}
+    {% include('MainBundle:Common:header.html.twig') %}
+    <!--========================================================
+                           CONTENT
+ =========================================================-->
+
+    {#{% include('MainBundle:Common:banner.html.twig') %}#}
+    <div class="container" style="padding-top: 100px;">
+        <article>
+            <img src="{{ asset('bundles/main/images/patron.jpg') }}" alt="M. Bennani" width="40%" height="auto" style="float: left;border-radius: 50%;box-shadow: 8px 8px 12px #000;margin-right: 3%;">
+            <div>
+                <h2 style="font-family: 'Pacifico', cursive;">Nostalgie africaine</h2>
+                <p>
+                    Après 31 ans passés en Afrique subsaharienne, ma  nostalgie est restée liée à la gastronomie et à l’art africains de ces pays si chaleureux et si accueillants.
+                </p>
+                <h3 style="font-family: 'Pacifico', cursive;#D9D9D9;">Le dépaysement en plein coeur de Casablanca</h3>
+                <p>
+                    Le restaurant Bambou d'Afrique a été inauguré en 2010, marquant le métissage des gastronomies africaine, libanaise, italienne, marocaine et autres, des cultures qui sont liées depuis cent ans en Afrique sub-saharienne.
+                    Le cadre est purement africain et moderne, dans un dépaysement en plein coeur de Casablanca, entouré de chefs de cuisine sénégalais, ivoiriens et libanais, et le tout autour d'un son du Kora ou de l'oud oriental.
+
+                    Le restaurant Bambou d’Afrique est embelli par les plus belles pièces d’art africain qui sont en vente.
+                </p>
+                <p>
+                    Très bonne visite !
+                </p>
+                <p>
+                    <a class="btn btn-primary btn-xs" href="{{ path('speciality', {'category' : 'liste'}) }}">Découvrez nos spécialités</a>
+                </p>
+            </div>
+
+        </article>
+    </div>
+    {% include('MainBundle:Common:footer.html.twig') %}
+{% endblock %}

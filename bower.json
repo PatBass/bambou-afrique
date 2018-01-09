@@ -1,0 +1,22 @@
+{
+  "name": "afmp",
+  "version": "0.0.1",
+  "directory": "web/components",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "1.9.*",
+    "components-foundation": "master",
+    "components-font-awesome": "master",
+    "jquery.dotdotdot": "master",
+    "jquery-form": "master",
+    "bower-foundation-datepicker": "master",
+    "momentjs": "master",
+    "jquery-simplecolorpicker": "master",
+    "jquery.equalheights": "master",
+    "jquery-maskedinput": "master",
+    "morrisjs": "master"
+  },
+  "resolutions": {
+    "jquery": "1.9.1"
+  }
+}

@@ -2,66 +2,48 @@
     <!--========================================================
                               HEADER
     =========================================================-->
-    <header>
-        <div class="container top-sect">
-            <div class="navbar-header" style="top:-52px;">
-                <h1 class="navbar-brand" >
-                    <a data-type='rd-navbar-brand'  href="./"><img src="{{ image('bundles/main/images/logo (1).png').cropResize(220,220) }}"></a>
-                </h1>
-                <a class="search-form_toggle" href="#"></a>
+    <!--header-->
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <h1 style="font-family: normal;"><a href="{{ path('index1') }}">Bambou d'Afrique</a></h1>
             </div>
-
-            <div class="help-box text-right">
-                <p>Contact</p>
-                <a href="#">+33 7 81 01 72 30</a>
-                <small><span>12 Boulevard Aristide Briand </span>Suresnes &nbsp;France</small>
+            <div class="header-top">
+                <div class="header-top-in">
+                    <ul class="header-grid">
+                        <li><a href="{{ path('account') }}">Mon Compte   </a> <label>/</label></li>
+                        <li ><a href="{{ path('login') }}">  Se connecter </a> </li>
+                        <li ><a href="{{ path('registration') }}">  S'inscrire </a> </li>
+                    </ul>
+                    <!-- <div class="act">
+                        <a href="#" class="done">Donec actortor </a>
+                    </div> -->
+                    <div class="clearfix"> </div>
+                </div>
+                <ul class="grid-header"><!--
+					<li><a href="account.html">My Account</a> <label>/</label></li> -->
+                    <li><a href="#">Mon panier</a> <label>/</label></li>
+                    <li><a href="{{ path('checkout') }}">  Passer la commande </a> </li>
+                </ul>
+                <div class="clearfix"> </div>
             </div>
+            <div class="header-bottom">
+                <div class="top-nav">
+                    <span class="menu"> </span>
+                    <ul>
+                        <li class="active" ><a href="{{ path('index1') }}" >Accueil  </a><label>- </label> </li>
+                        <li><a href="{{ path('speciality', {'category' : 'liste'}) }}">Specialités</a><label>- </label></li>
+                        <li><a href="{{ path('galery') }}" > Galerie</a><label>- </label></li>
+                        <li><a href="{{ path('about') }}" > A propos</a><label>- </label></li>
+                        <li><a href="{{ path('contact') }}">Contact</a></li>
+                    </ul>
 
-        </div>
-
-
-        <div id="stuck_container" class="stuck_container">
-            <div class="container">
-                <nav class="navbar navbar-default navbar-static-top pull-left">
-
-                    <div class="" id="header">
-                        <ul class="nav navbar-nav sf-menu" data-type="navbar">
-                            <li {% if active == 'home' %} class="active" {% endif %}>
-                                <a href="./">ACCUEIL</a>
-                            </li>
-                            <li {% if active == 'equipe' %} class="active"{% endif %}>
-                                <a href="http://localhost:8888/odellya/web/app_dev.php/index#equipe">L'EQUIPE</a>
-                            </li>
-                            {#
-                            <li class="dropdown">
-                                <a href="http://localhost:8888/odellya/web/app_dev.php/index#mot">MOT DU PRESIDENT<span class=""></span></a>
-
-                            </li>
-                            #}
-
-                            <li {% if active == 'event' %}class="active"{% endif %}>
-                                <a href="{{ path('event') }}">EVENEMENTS</a>
-                            </li>
-
-                            <li {% if active == 'application' %}class="active"{% endif %}>
-                                <a href="{{ path('application') }}">ADHESION</a>
-                            </li>
-
-                            <li {% if active == 'contact' %}class="active"{% endif %}>
-                                <a href="{{ path('contact') }}">CONTACTS</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <form class="search-form" action="search.php" method="GET" accept-charset="utf-8">
-                    <label class="search-form_label">
-                        <input class="search-form_input" type="text" name="s" autocomplete="off" placeholder=""/>
-                        <span class="search-form_liveout"></span>
-                    </label>
-                    <button class="search-form_submit fa-search" type="submit"></button>
-                </form>
-
+                </div>
+                <div class="search">
+                    <form>
+                        <input type="text" value="Search store here ..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" >
+                        <input type="submit" value="">
+                    </form>
+                </div>
+                <div class="clearfix"> </div>
             </div>
-
-        </div>
-    </header>

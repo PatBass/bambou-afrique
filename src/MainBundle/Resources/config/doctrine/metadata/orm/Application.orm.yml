@@ -1,0 +1,88 @@
+Application:
+    type: entity
+    table: application
+    indexes:
+        IDX_A45BDDC1A9F87BD:
+            columns:
+                - title_id
+    uniqueConstraints:
+        UNIQ_A45BDDC1E7927C74:
+            columns:
+                - email
+        UNIQ_A45BDDC13DA5256D:
+            columns:
+                - image_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        applied:
+            type: boolean
+            nullable: false
+        name:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+        email:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+        phone:
+            type: string
+            nullable: false
+            length: 16
+            options:
+                fixed: false
+        occupation:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+        country:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        message:
+            type: text
+            nullable: false
+            length: null
+            options:
+                fixed: false
+        date:
+            type: datetime
+            nullable: true
+    manyToOne:
+        title:
+            targetEntity: Title
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                title_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        image:
+            targetEntity: Image
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                image_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

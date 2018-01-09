@@ -22,12 +22,13 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new AppBundle\AppBundle(),
             new MainBundle\MainBundle(),
             new Gregwar\ImageBundle\GregwarImageBundle(),
             new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
-            new \FOS\ElasticaBundle\FOSElasticaBundle()
+            new \FOS\ElasticaBundle\FOSElasticaBundle(),
+            new UserBundle\UserBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

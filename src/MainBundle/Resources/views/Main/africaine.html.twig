@@ -1,0 +1,152 @@
+{% extends "::Layout/layout.html.twig" %}
+{% block title %}{{ parent() }} - Casablanca{% endblock %}
+{% block body %}
+    {% include('MainBundle:Common:header.html.twig') %}
+    <!--========================================================
+                           CONTENT
+ =========================================================-->
+
+    {#{% include('MainBundle:Common:banner.html.twig') %}#}
+
+    <div class="container" style="padding-top: 100px;">
+        <div class="content-grid">
+            <div class="col-md-4 grid-food">
+                <div class="popular">
+                    <h3>Specialités</h3>
+                    <p>Lorem ipsum dolor site amet vivamus laoreet desp</p>
+                    <ul class="popular-in">
+                        <li><a href="single.html"><i> </i>Cuisine ivoirienne </a></li>
+                        <li><a href="single.html"><i> </i>Cuisine sénégalaise </a></li>
+                        <li><a href="single.html"><i> </i>Boissons</a></li>
+                        <li><a href="single.html"><i> </i>Cuisine mixte</a></li>
+                    </ul>
+                </div>
+                <div class="popular phone">
+                    <h3>Info contact</h3>
+                    <p>Vivamus vel eros nulla sed pellentesque sem</p>
+                    <ul class="number">
+                        <li><span><i> </i>(000) 888 88888</span> </li>
+                        <li><a href="mailto:info@sitename.com"><i class="mail"> </i>info@bamboudafrique.com </a></li>
+                    </ul>
+                </div>
+                <div class="popular">
+                    <h3>Commander en ligne</h3>
+                    <p>Cosectrurer admpsuing tempor nulla incidi esuismod</p>
+                    <form>
+                        <input type="text" value="your email id here" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'your email id here';}">
+                        <input type="submit" value="Envoyer" >
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!---->
+        <div class="col-md-8 food-grid">
+            <div class="cup">
+                <div class="col-md-4 cup-in">
+                    <a href="{{ path('single') }}"><img src="{{ asset('bundles/main/images/gal6.jpg') }}" class="img-responsive" alt=""></a>
+                    <p>Tchiebou poulet</p>
+                    <span class="dollar">69 DH</span>
+                    <div class="details-in">
+                        <a href="#" class="details">Details</a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-4 cup-in">
+                    <a href="{{ path('single') }}"><img src="{{ asset('bundles/main/images/gal5.jpg') }}" class="img-responsive" alt=""></a>
+                    <p>Sole</p>
+                    <span class="dollar">100 DH</span>
+                    <div class="details-in">
+                        <a href="{{ path('single') }}" class="details">Details</a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-4 cup-in">
+                    <a href="{{ path('single') }}"><img src="{{ asset('bundles/main/images/saka_saka.jpg') }}" class="img-responsive" alt=""></a>
+                    <p>Sauce aubergine </p>
+                    <span class="dollar">75 DH</span>
+                    <div class="details-in">
+                        <a href="{{ path('single') }}" class="details">Details</a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+
+                <div class="col-md-4 cup-in">
+                    <a href="{{ path('single') }}"><img src="{{ asset('bundles/main/images/sauce_graine.jpg') }}" class="img-responsive" alt=""></a>
+                    <p>Sauce graines</p>
+                    <span class="dollar">105 DH</span>
+                    <div class="details-in">
+                        <a href="{{ path('single') }}" class="details">Details</a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-4 cup-in">
+                    <a href="{{ path('single') }}"><img src="{{ asset('bundles/main/images/gal26.jpg') }}" class="img-responsive" alt=""></a>
+                    <p>Carpes braisés</p>
+                    <span class="dollar">89 DH</span>
+                    <div class="details-in">
+                        <a href="{{ path('single') }}" class="details">Details</a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-4 cup-in">
+                    <a href="{{ path('single') }}"><img src="{{ asset('bundles/main/images/poulet_braise.jpg') }}" class="img-responsive" alt=""></a>
+                    <p>1/2 Poulet braisé</p>
+                    <span class="dollar">55 DH</span>
+                    <div class="details-in">
+                        <a href="{{ path('single') }}" class="details">Details</a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <!---->
+            <div class="browse">
+                <p class="vit">Mollis vitae oigu edlobit <span>vulipur felis ...</span></p>
+                <a href="{{ path('single') }}" class="more">Voir plus</a>
+                <div class="clearfix"> </div>
+                <div class="arrow">
+                    <a href="#"><img src="{{ asset('bundles/main/images/arrow.png') }}" alt=""></a>
+                </div>
+            </div>
+            <!---->
+            <div class="content-sit">
+                <div class="col-md-6 amet">
+                    <h3>Astuce du jour</h3>
+                    <p>tortillas </p>
+                    <div class="egg">
+                        <a href="{{ path('single') }}"><img src="{{ asset('bundles/main/images/pic.jpg') }}" class="img-responsive" alt=""></a>
+                    </div>
+                    <p class="para-in">Rem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incidi. </p>
+                </div>
+                <div class="col-md-6 amet-in">
+                    <h3>Evénements</h3>
+                    <p>Dates à entregister </p>
+                    <div class="amet-grid">
+                        <div class="now"><span>Nov</span>2017</div>
+                        <p class="sed"><span>Lorem ipsum dolor sit amet </span> <span>consecteturLorem ipsum dolor sit</span> <span>amet, consectetur adipisicing</span></p>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="amet-grid">
+                        <div class="now"><span>Dec</span>2017</div>
+                        <p class="sed"><span>Lorem ipsum dolor sit amet </span> <span>consecteturLorem ipsum dolor sit</span> <span>amet, consectetur adipisicing</span></p>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="amet-grid">
+                        <div class="now"><span>Oct</span>2017</div>
+                        <p class="sed"><span>Lorem ipsum dolor sit amet </span> <span>consecteturLorem ipsum dolor sit</span> <span>amet, consectetur adipisicing</span></p>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+
+    <!---->
+    {% include('MainBundle:Common:footer.html.twig') %}
+{% endblock %}
+
+
+
+

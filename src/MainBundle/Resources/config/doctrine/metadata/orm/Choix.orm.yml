@@ -1,0 +1,25 @@
+Choix:
+    type: entity
+    table: choix
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        proposition:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        count:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+    lifecycleCallbacks: {  }

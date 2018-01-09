@@ -1,0 +1,261 @@
+<?php
+
+namespace UserBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Address
+ *
+ * @ORM\Table(name="address")
+ * @ORM\Entity
+ */
+class Address
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="streetnumber", type="integer", nullable=true)
+     */
+    private $streetnumber;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="streetextension", type="string", length=10, nullable=true)
+     */
+    private $streetextension;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="streettype", type="string", length=10, nullable=true)
+     */
+    private $streettype;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="streetname", type="string", length=60, nullable=true)
+     */
+    private $streetname;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="zipcode", type="string", length=5, nullable=true)
+     */
+    private $zipcode;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="city", type="string", length=40, nullable=true)
+     */
+    private $city;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="country", type="string", length=30, nullable=true)
+     */
+    private $country;
+
+    /**
+     * Get full address
+     * @param boolean $inline
+     * @return string
+     */
+    public function getFullAddress($inline = true)
+    {
+        $address = $this->streetnumber." ";
+        if ($this->streetextension) {
+            $address .= $this->streetextension." ";
+        }
+        $address .= $this->streettype." ".$this->streetname." ";
+        $address .= $inline ? "- " : "<br>";
+        $address .= $this->zipcode." ".$this->city;
+
+        return $address;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set streetnumber
+     *
+     * @param integer $streetnumber
+     * @return Address
+     */
+    public function setStreetnumber($streetnumber)
+    {
+        $this->streetnumber = $streetnumber;
+
+        return $this;
+    }
+
+    /**
+     * Get streetnumber
+     *
+     * @return integer 
+     */
+    public function getStreetnumber()
+    {
+        return $this->streetnumber;
+    }
+
+    /**
+     * Set streetextension
+     *
+     * @param string $streetextension
+     * @return Address
+     */
+    public function setStreetextension($streetextension)
+    {
+        $this->streetextension = $streetextension;
+
+        return $this;
+    }
+
+    /**
+     * Get streetextension
+     *
+     * @return string 
+     */
+    public function getStreetextension()
+    {
+        return $this->streetextension;
+    }
+
+    /**
+     * Set streetname
+     *
+     * @param string $streetname
+     * @return Address
+     */
+    public function setStreetname($streetname)
+    {
+        $this->streetname = $streetname;
+
+        return $this;
+    }
+
+    /**
+     * Get streetname
+     *
+     * @return string 
+     */
+    public function getStreetname()
+    {
+        return $this->streetname;
+    }
+
+    /**
+     * Set zipcode
+     *
+     * @param string $zipcode
+     * @return Address
+     */
+    public function setZipcode($zipcode)
+    {
+        $this->zipcode = $zipcode;
+
+        return $this;
+    }
+
+    /**
+     * Get zipcode
+     *
+     * @return string 
+     */
+    public function getZipcode()
+    {
+        return $this->zipcode;
+    }
+
+    /**
+     * Set city
+     *
+     * @param string $city
+     * @return Address
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return string 
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Set country
+     *
+     * @param string $country
+     * @return Address
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return string 
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * Set streettype
+     *
+     * @param string $streettype
+     * @return Address
+     */
+    public function setStreettype($streettype)
+    {
+        $this->streettype = $streettype;
+
+        return $this;
+    }
+
+    /**
+     * Get streettype
+     *
+     * @return string 
+     */
+    public function getStreettype()
+    {
+        return $this->streettype;
+    }
+}
