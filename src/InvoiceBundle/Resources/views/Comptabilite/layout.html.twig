@@ -1,0 +1,19 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+	<div id="body_comptabilite">
+		<div id="content_comptabilite">
+			{% block content %}{% endblock %}
+		</div>
+	</div>
+	<header>
+		<div class="logo"></div>
+		<h1>AFM PLAISANCE<br><small>Permis bateaux</small></h1>
+		<p id="whois">
+			{% if app.user.hasRole('ROLE_SUPER_ADMIN') %}
+				<a href="{{ path('AFMPInvoiceBundle_listing') }}"><span class="fa fa-caret-left red"></span> Retour administration</a>
+			{% else %}
+				<span class="fa fa-database red"></span> Interface de comptabilité
+			{% endif %}
+		</p>
+	</header>
+{% endblock %}

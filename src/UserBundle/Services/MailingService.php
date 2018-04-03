@@ -3,7 +3,7 @@
 namespace UserBundle\Services;
 
 
-use AFMP\InvoiceBundle\Entity\Invoice;
+use InvoiceBundle\Entity\Invoice;
 use UserBundle\Entity\User;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Doctrine\ORM\EntityManager;
@@ -348,19 +348,16 @@ class MailingService
     public function sendRegistrationMail(User $user)
     {
         $this->message = \Swift_Message::newInstance();
-        $logo = $this->message->embed(\Swift_Image::fromPath($this->container->get('request')->getSchemeAndHttpHost().$this->container->get('templating.helper.assets')->getUrl('bundles/afmpuser/images/logo_fat.png')));
+        $logo = $this->message->embed(\Swift_Image::fromPath($this->container->get('request')->getSchemeAndHttpHost().$this->container->get('templating.helper.assets')->getUrl('bundles/main/images/logo.png')));
 
-        $licenceFile = $this->entityManager->getRepository('AFMPFilingBundle:LicenceFile')->findInprogressByUser($user->getId());
-
-        $to = $licenceFile->getCadeau() ? $licenceFile->getSchool()->getEmail() : $user->getEmail();
-        $subject = 'Bienvenue sur AFMP';
+        $to = $user->getEmail();
+        $subject = 'Bienvenue sur Bambou d\'Afrique Casablanca' ;
         $data = array(
             'title'  => $subject,
             'logo'   => $logo,
-            'school' => $licenceFile->getSchool(),
             'user'   => $user
         );
-        $body = $this->twig->render('AFMPClientBundle:Mail:registration.email.twig', $data);
+        $body = $this->twig->render('UserBundle:Mail:registration.email.twig', $data);
 
         //return $this->sendMail($licenceFile->getSchool()->getEmail(), $to, $subject, $body);
 

@@ -59,13 +59,18 @@ class MainController extends Controller
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route ("/Bamboudafrique-Casablanca/le-mets", name="single")
+     * @Route ("/Bamboudafrique-Casablanca/le-mets/{id}", name="single")
      *
      */
-    public function singleAction()
+    public function singleAction($id)
     {
+        $em = $this->getDoctrine()->getManager();
+        $product = $em->getRepository('MainBundle:Product')->find($id);
 
-        return $this->render('MainBundle:Main:single.html.twig');
+        return $this->render('MainBundle:Main:single.html.twig', array(
+                'product' => $product
+            )
+        );
 
     }
 
@@ -76,23 +81,37 @@ class MainController extends Controller
      */
     public function specialityAction(Request $request, $category)
     {
+        $category = strtolower($category);
         $em = $this->getDoctrine()->getManager();
         $productsList = $em->getRepository('MainBundle:Product')->findAll();
+        $listCategories = $em->getRepository('MainBundle:Category')->findAll();
+        $specialityList = $em->getRepository('MainBundle:Specialitylist')->findAll();
+
 
         $finalProductsList = [];
+        if ($category != "liste") {
+            foreach ($productsList as $product ) {
 
-        foreach ($productsList as $product ) {
-            foreach ($product->getCategories() as $cat) {
-                if ($cat === $category) {
-                    $finalProductsList[] = $product;
+                foreach ($listCategories as $cat) {
+                    //var_dump($category);die();
+                    if ($cat->getName() === $category) {
+                        $product->addCategory($cat);
+                        $finalProductsList[] = $product;
+                    }
                 }
             }
-
         }
+
+        $categ = ($category != "liste")? '$category':'';
+
+        //var_dump($finalProductsList);die();
 
 
         return $this->render('MainBundle:Main:'.$category.'.html.twig', array(
-            'finalProductsList' => $finalProductsList
+            'finalProductsList' => $finalProductsList,
+            'productsList'      => $productsList,
+            'categ'             => $categ,
+            'specialityList'    => $specialityList
         ));
 
     }

@@ -1,0 +1,62 @@
+// Mixins
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+@import "compass/css3/images";
+@import "compass/css3/transform";
+
+@mixin shadow {
+	@include single-box-shadow(rgba(0,0,0,0.2), 3px, 2px, 4px);
+}
+
+@mixin insetShadow {
+	@include single-box-shadow(rgba(0,0,0,0.2), 1px, 1px, 3px, 0px, true);
+}
+
+@mixin round {
+	@include border-radius(6px);
+}
+
+@mixin dotdotdot {
+	display: block;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden !important;
+}
+
+@mixin button($color) {
+	@include background-image(linear-gradient(lighten($color, 10), $color) !important);
+	border: 1px solid darken($color, 10);
+	@include round();
+	padding: 10px 18px 10px 18px;
+	font-size: 12px;
+	text-transform: uppercase;
+	display: inline-block;
+	@if lightness($color) > 50 {
+		color: $black;
+	}
+	@else {
+		color: #ffffff;
+	}
+	&:hover {
+		@if lightness($color) > 50 {
+			color: $black;
+		}
+		@else {
+			color: #ffffff;
+		}
+		@include background-image(linear-gradient($color, lighten($color, 10)));
+	}
+}
+
+@mixin screen($media) {
+	@if $media == small {
+		@media only screen and (max-width: $small) { @content; }
+	}
+	@else if $media == medium {
+		@media only screen and (min-width: $small + 1) and (max-width: $large - 1) { @content; }
+	}
+	@else if $media == large {
+		@media only screen and (min-width: $large) { @content; }
+	}
+}

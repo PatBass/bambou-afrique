@@ -1,0 +1,25 @@
+{% extends 'AFMPUserBundle:Layout:offline_layout.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block content %}
+	<h1><span class="fa fa-question"></span> Mot de passe perdu</h1>
+	{% trans_default_domain 'FOSUserBundle' %}
+
+	<form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+	    <div>
+	        {% if invalid_username is defined %}
+	            <p class="form_errors">L'email n'existe pas dans notre base de donnée.</p>
+	        {% endif %}
+	        <input type="text" id="username" name="username" required="required" placeholder="Votre adresse email ...">
+	    </div>
+	    <div class="ecart10"></div>
+	    <p style="text-align: right; margin: 0px;">
+	        <input class="red_button" type="submit" value="{{ 'resetting.request.submit'|trans }}" />
+	    </p>
+	</form>
+
+{% endblock %}
+
+{% block under %}
+	<a href="{{ path('fos_user_security_login') }}">J'ai déjà un compte</a>
+{% endblock %}

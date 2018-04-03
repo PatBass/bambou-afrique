@@ -1,0 +1,106 @@
+{% include 'AFMPInvoiceBundle:PDF:css.pdf.twig' %}
+<page backtop="100mm" backbottom="29mm" backleft="0mm" backright="0mm">
+	<page_header>
+		<div id="tag"></div>
+
+		{# Logo #}
+		<div id="logo_container">
+			<img src="bundles/afmpuser/images/logo_pdf.png" height="110">
+		</div>
+
+		{# Client address #}
+		<div id="client_edge"></div>
+		<table cellpadding="0" cellspacing="0" style="position: absolute; top: 32.5mm; left: 0mm;">
+			<tr>
+				<td style="width: 5mm;"></td>
+				<td style="width: 85mm;">
+					<p style="font-size: 14pt; line-height: 6mm; color: #000000; text-align: left;">
+						<b>{{ afmp.invoice_company }}</b>
+					</p>
+					<p style="font-size: 9pt; line-height: 4mm; color: #666666; text-align: left;">
+						Tél. : {{ afmp.invoice_phone }}<br/>
+						Email : {{ afmp.invoice_email }}<br />
+						{{ afmp.invoice_web }}
+					</p>
+				</td>
+				<td style="width: 13mm;">
+					<div style="width: 13mm; height: 35mm;"></div>
+				</td>
+				<td style="width: 87mm;">
+					<div style="width: 75.6mm; padding: 4mm;">
+						<p style="font-family: Arial; font-size: 11pt; line-height: 5mm;">
+							{% block client_address %}{% endblock %}
+						</p>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		{# Number #}
+		<div style="width: 190mm; position: absolute; top: 10mm; right: 5mm;">
+			<p style="font-size: 16pt; line-height: 4mm; color: #000000; text-align: right;">{% block number %}{% endblock %}</p>
+		</div>
+
+		{# Invoice object #}
+		<div style="width: 190mm; position: absolute; top: 82mm; left: 5mm;">
+			<p style="font-size: 10pt; line-height: 4mm; color: #000000; text-align: left; font-weight: normal;"><b>{% block object %}{% endblock %}</b></p>
+		</div>
+
+		{# Invoice date #}
+		<div style="width: 190mm; position: absolute; top: 82mm; right: 5mm;">
+			<p style="font-size: 10pt; line-height: 4mm; color: #000000; text-align: right;">Le {% block date %}{% endblock %}</p>
+		</div>
+
+		{# Table header #}
+		<table cellpadding="0" cellspacing="0" border="0" style="width: 190mm; margin: 0mm; position: absolute; top: 93mm; left: 0mm;">
+			<tr bgcolor="#e6e6e6">
+				<td style="border-bottom: 0.4mm solid #000000; border-top: 0.4mm solid #000000; border-right: 0.2mm solid #000000; width: 91.9mm; border-left: 0.4mm solid #000000;">
+					<p style="color: #000000; text-align: center; font-size: 9pt;">DÉSIGNATION</p>
+				</td>
+				<td style="border-bottom: 0.4mm solid #000000; border-top: 0.4mm solid #000000; border-right: 0.2mm solid #000000; width: 23.8mm;">
+					<p style="color: #000000; text-align: center; font-size: 9pt;">PU</p>
+				</td>
+				<td style="border-bottom: 0.4mm solid #000000; border-top: 0.4mm solid #000000; border-right: 0.2mm solid #000000; width: 21.8mm;">
+					<p style="color: #000000; text-align: center; font-size: 9pt;">QUANTITÉ</p>
+				</td>
+				<td style="border-bottom: 0.4mm solid #000000; border-top: 0.4mm solid #000000; height: 6mm; border-right: 0.2mm solid #000000; width: 23.4mm;">
+					<p style="color: #000000; text-align: center; font-size: 9pt;">TVA</p>
+				</td>
+				<td style="border-bottom: 0.4mm solid #000000; border-top: 0.4mm solid #000000; border-right: 0.4mm solid #000000; width: 25.8mm;">
+					<p style="color: #000000; text-align: center; font-size: 9pt;">MONTANT HT</p>
+				</td>
+			</tr>
+			<tr bgcolor="#ffffff">
+				<td style="height: 164mm; border-left: 0.4mm solid #000000; border-right: 0.2mm solid #000000; width: 91.9mm;"></td>
+				<td style="border-right: 0.2mm solid #000000; width: 23.8mm;"></td>
+				<td style="border-right: 0.2mm solid #000000; width: 21.8mm;"></td>
+				<td style="border-right: 0.2mm solid #000000; width: 23.4mm;"></td>
+				<td style="border-right: 0.4mm solid #000000; width: 25.8mm;"></td> 
+			</tr>
+		</table>
+	</page_header>
+	<page_footer> 
+		<div style="width: 190mm; position: absolute; bottom: 17mm; left: 0px;">
+			<p style="text-align: center; color: #000000; font-size: 10pt;">{{ afmp.invoice_footer|raw }}</p>
+		</div>
+		<div style="width: 190mm; position: absolute; bottom: 5mm; left: 0px;">
+			<p style="text-align: center; color: #000000; font-size: 8pt;">
+				<b>{{ afmp.invoice_company }}</b> - {{ afmp.invoice_address }}<br>
+				Tél. : {{ afmp.invoice_phone }} - Email : {{ afmp.invoice_email }} - Site : {{ afmp.invoice_web }}<br>
+				{{ afmp.invoice_legales }}
+			</p>
+		</div>
+		<table cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td style="width: 10mm;"></td>
+				<td style="width: 170mm;"><p style="text-align: center; color: #000000; font-size: 10pt;"><b></b></p></td>
+				<td style="width: 10mm;"><p style="font-size: 9pt; color: #000000; font-family: Arial; text-align: right;">[[page_cu]]/[[page_nb]]</p></td>
+			</tr>
+		</table>
+		<div style="width: 190mm; height: 1px; margin-bottom: 5mm;"></div>
+		<div style="width: 190mm; height: 0.4mm; margin: 0mm; position: absolute; bottom: 29.4mm; left: 0mm; background-color: #000000;"></div>
+	</page_footer>
+	
+
+	{% block content %}{% endblock %}	
+</page>

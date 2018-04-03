@@ -1,0 +1,24 @@
+{
+  "name": "jquery-form",
+  "main": "jquery.form.js",
+  "author": "M. Alsup",
+  "dependencies": {
+    "jquery": ">=1.5"
+  },
+  "ignore": [
+    "README.md",
+    "composer.json",
+    "form.jquery.json",
+    "package.json"
+  ],
+  "homepage": "https://github.com/malsup/form",
+  "_release": "0f12213f87",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0f12213f87e4fd53ae4ce14954e0cd346da7d809"
+  },
+  "_source": "git://github.com/malsup/form.git",
+  "_target": "master",
+  "_originalSource": "jquery-form"
+}

@@ -14,3 +14,10 @@ services:
         arguments: [@mailer]
         tags:
             - { name: doctrine.event_listener, event: postPersist }
+
+    bambou.mailer:
+        class: UserBundle\Services\MailingService
+        arguments: [@mailer, @twig, @service_container, @doctrine.orm.entity_manager]
+
+    bambou.calendar:
+        class: MainBundle\Services\Calendar

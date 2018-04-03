@@ -1,7 +1,7 @@
 {% extends "::Layout/layout.html.twig" %}
 {% block title %}{{ parent() }} - Casablanca{% endblock %}
 {% block body %}
-    {% include('MainBundle:Common:header.html.twig') %}
+    {% include('MainBundle:Common:header.html.twig') with { active: ''} %}
     <!--========================================================
                            CONTENT
  =========================================================-->
@@ -77,6 +77,23 @@
                 </div>
                 <div class="store-right">
                     <h6>Top rated products</h6>
+
+                    {% if product %}
+                        <div class="product">
+                            <img class="img-responsive fashion" src="{{ asset('bundles/main'~product.image.url) }}" alt=""/>
+                            <div class="grid-product">
+                                <a href="#" class="elit">consectetuer adipiscing elit</a>
+                                <span class="price price-in"><small>{{ product.price }}</small> 10.00 DH</span>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    {% endif %}
+
+
+
+
+
+
                     <div class="product">
                         <img class="img-responsive fashion" src="{{ asset('bundles/main/images/st1.jpg') }}" alt=""/>
                         <div class="grid-product">

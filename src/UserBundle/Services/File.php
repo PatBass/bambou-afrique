@@ -1,10 +1,10 @@
 <?php
-namespace AFMP\UserBundle\Services;
+namespace UserBundle\Services;
 
 /**
- * Classe pour la gestion de l'upload de fichiers
+ * File upload handler
  *
- * @author Mikael SERREAU <mikael@squareeyes.fr>
+ * @author Patrick BASSOUKISSA <patrickbassoukissa@gmail.com>
  */
 class File
 {
@@ -19,7 +19,7 @@ class File
     private $webDir;
 
     /**
-     * Injection du service slugify
+     * Integrating slugify service
      * @param Slugify $slugify
      * @param String  $kernelDir
      */

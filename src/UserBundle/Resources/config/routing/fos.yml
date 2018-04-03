@@ -1,0 +1,58 @@
+#####################
+## SECURITY ROUTES ##
+#####################
+fos_user_security_login:
+    pattern: /Bamboudafrique-Casablanca/connexion
+    defaults: { _controller: "FOSUserBundle:Security:login" }
+
+fos_user_security_check:
+    pattern: /Bamboudafrique-Casablanca/connexion_traitement
+    defaults: { _controller: "FOSUserBundle:Security:check" }
+    requirements:
+        _method: post
+
+fos_user_security_logout:
+    pattern: /Bamboudafrique-Casablanca/deconnexion
+    defaults: { _controller: "FOSUserBundle:Security:logout" }
+
+#####################
+## REGISTER ROUTES ##
+#####################
+fos_user_registration_register:
+    pattern: /Bamboudafrique-Casablanca/inscription
+    defaults: { _controller: "FOSUserBundle:Registration:register" }
+
+fos_user_registration_confirmed:
+    pattern: /Bamboudafrique-Casablanca/inscription/confirm
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: UserBundle_dispatch
+        permanent: true
+
+fos_user_profile_show:
+    pattern: /Bamboudafrique-Casablanca/profil
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: UserBundle_dispatch
+        permanent: true
+
+####################
+## RESETTING PASS ##
+####################
+fos_user_resetting_request:
+    pattern: /Bamboudafrique-Casablanca/connexion/mot-de-passe-perdu
+    defaults: { _controller: "FOSUserBundle:Resetting:request" }
+
+fos_user_resetting_send_email:
+    pattern: /Bamboudafrique-Casablanca/connexion/mot-de-passe-perdu/email
+    defaults: { _controller: "FOSUserBundle:Resetting:sendEmail" }
+    requirements: { _method: post }
+
+fos_user_resetting_check_email:
+    pattern: /Bamboudafrique-Casablanca/connexion/mot-de-passe-perdu/verification-email
+    defaults: { _controller: "FOSUserBundle:Resetting:checkEmail" }
+
+fos_user_resetting_reset:
+    pattern: /Bamboudafrique-Casablanca/connexion/mot-de-passe-perdu/token/{token}
+    defaults: { _controller: "FOSUserBundle:Resetting:reset" }
+

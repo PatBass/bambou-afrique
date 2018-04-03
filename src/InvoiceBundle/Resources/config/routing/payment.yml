@@ -1,0 +1,13 @@
+## Show payment for invoice ##
+AFMPInvoiceBundle_payment_show:
+    pattern: /facture/{id}
+    defaults: { _controller: "AFMPInvoiceBundle:Payment:displayInvoicePayment" }
+    requirements:
+        id: \d+
+
+## Remove payment ##
+AFMPInvoiceBundle_payment_remove:
+    pattern: /{id}/supprimer
+    defaults: { _controller: "AFMPInvoiceBundle:Payment:remove" }
+    requirements:
+        id: \d+

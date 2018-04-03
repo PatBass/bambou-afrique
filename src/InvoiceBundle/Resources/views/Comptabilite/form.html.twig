@@ -1,0 +1,14 @@
+<form action="" method="get">
+	<input type="hidden" value="{{ username }}" name="username">
+	<input type="hidden" value="{{ secret }}" name="secret">
+	<p style="text-align: center; font-size: 22px; margin: 0;">
+		Encaissement du
+		<input type="text" class="datepicker_compta" name="d1" value="{{ d1|date('d/m/Y') }}">
+		au
+		<input type="text" class="datepicker_compta" name="d2" value="{{ d2|date('d/m/Y') }}">
+	</p>
+	<p style="text-align: center; margin: 0;">
+		<input type="text" value="{{ query }}" name="query" placeholder="Nom, prénom, N°facture, N°paiement, ..." style="width: 300px; display: inline-block;">
+		<button type="submit" class="gray_button" style="display: inline-block;"><span class="fa fa-search"></span></button>
+	</p>
+</form>

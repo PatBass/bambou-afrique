@@ -1,0 +1,9 @@
+## Les encaissements ##
+AFMPInvoiceBundle_encasement: 
+    pattern: /encaissements
+    defaults: { _controller: "AFMPInvoiceBundle:Comptabilite:encasement" }
+
+## Telechargement des factures
+AFMPInvoiceBundle_encasement_dl_invoice: 
+    pattern: /factures/download
+    defaults: { _controller: "AFMPInvoiceBundle:Comptabilite:downloadInvoices" }

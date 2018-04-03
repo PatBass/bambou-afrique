@@ -1,0 +1,66 @@
+{% extends "::Layout/layout.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block title %}Inscription - {{ parent() }} - Casablanca{% endblock %}
+{% block body %}
+    {% include('MainBundle:Common:header.html.twig') with { active: ''} %}
+
+    <div><br /><br /><br /></div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="top100"></div>
+                    <div class="panel panel-default">
+                        <div class="panel-body" id="panel-body-sign-in">
+                            <div class="row" >
+                                <div id="display-error-login" class="col-sm-10 col-sm-offset-1 alert alert-danger alert-login" style="text-align: center;border: 1px solid crimson;display: none;">
+                                    {% if error %}
+                                        <button type="button" data-toggle="tooltip" data-placement="top" title="Close" class="close" data-dismiss="alert">x</button>
+                                        <div id="errorForm">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-10 col-sm-offset-1" style="text-align: center;">
+                                    <p><i class="glyphicon glyphicon-lock" style="color:#CC4324;"></i> Se connecter</p>
+                                    <form action="{{ path('fos_user_security_check') }}" method="post">
+                                        <div class="modal-body">
+                                            <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                                            <div class="form-group">
+                                                <input type="text" required="required" name="_username" class="form-control btn" id="username" placeholder="Tapez votre email ici" title="Votre email" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" required="required" name="_password" class="form-control btn" id="password" placeholder="Tapez votre mot de passe ici" title="Votre mot de passe" />
+                                            </div>
+                                            <div class="form-group" style="float: left;">
+                                                <label>
+                                                    <input type="checkbox"> Se souvenir de moi
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="submit" class="form-control btn btn-color" value="Connexion" />
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div style="float: left;">
+                                                <a href="{{ path('fos_user_resetting_request') }}" >Mot de passe perdu ?</a>&nbsp;&nbsp;
+                                                <a href="{{ path('fos_user_registration_register') }}" >Je veux m'inscrire</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+{% endblock %}
+{% block footer %}
+    {% include('MainBundle:Common:footer.html.twig') %}
+{% endblock %}
+{% block javascripts %}{% endblock %}

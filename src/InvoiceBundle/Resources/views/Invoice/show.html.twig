@@ -1,0 +1,37 @@
+{% extends 'AFMPUserBundle:Layout:layout.html.twig' %}
+{% block content %}
+	<div class="relative">		
+		{% include 'AFMPInvoiceBundle:Invoice:header.html.twig' %}
+
+		<form id="update_invoice_form" action="" method="post">
+			{{ form_widget(form._token) }}
+			<div class="small-6 columns" style="padding-left: 0px;">
+				<div>
+					{{ form_widget(form.client) }}
+				</div>
+			</div>	
+			<div class="small-6 columns" style="padding-right: 0px;">
+				<a href="{{ path('AFMPClientBundle_infouser_add', { 'id': invoice.id }) }}" class="gray_button"><span class="fa fa-plus"></span> Ajouter un client</a>
+			</div>
+			<br class="clear">
+			<div class="ecart10"></div>
+			<div class="small-9 columns" style="padding-left: 0px;">{{ form_widget(form.title) }}</div>
+			<div class="small-3 columns" style="padding-right: 0px;">{{ form_widget(form.invoicedate) }}</div>
+			<br class="clear">
+			<div class="ecart10"></div>
+			{% if form.lines|length > 0 %}
+				{% include 'AFMPInvoiceBundle:Form:invoiceline.html.twig' with { 'formInvoiceLine': form.lines } %}
+			{% endif %}
+
+			<p class="left">
+				<a href="{{ path('AFMPInvoiceBundle_add_line', { 'id': invoice.id }) }}" class="add_invoice_line gray_button"><span class="fa fa-plus"></span> Ajouter une ligne</a>
+			</p>
+
+			<br class="clear">
+			<div class="ecart10"></div>
+			<p style="text-align: right;">
+				<button type="submit" class="red_button">Modifier la facture</button>
+			</p>
+		</form>
+	</div>
+{% endblock %}

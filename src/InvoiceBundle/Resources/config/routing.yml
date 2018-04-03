@@ -1,0 +1,14 @@
+## Import securized area ##
+AFMPInvoiceBundle_route:
+    resource: "@AFMPInvoiceBundle/Resources/config/routing/invoice.yml"
+    prefix: /admin/facture/
+
+## Import securized payment area ##
+AFMPInvoiceBundle_payment_import:
+    resource: "@AFMPInvoiceBundle/Resources/config/routing/payment.yml"
+    prefix: /admin/paiement/
+
+## Import comptabilite ##
+AFMPInvoiceBundle_comptabilite_import:
+    resource: "@AFMPInvoiceBundle/Resources/config/routing/comptabilite.yml"
+    prefix: /comptabilite/

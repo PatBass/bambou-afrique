@@ -1,7 +1,7 @@
 {% extends "::Layout/layout.html.twig" %}
 {% block title %}{{ parent() }} - Casablanca{% endblock %}
 {% block body %}
-    {% include('MainBundle:Common:header.html.twig') %}
+    {% include('MainBundle:Common:header.html.twig') with {active: ''}%}
     <!--========================================================
                            CONTENT
  =========================================================-->
@@ -42,6 +42,28 @@
         <!---->
         <div class="col-md-8 food-grid">
             <div class="cup">
+                {% if finalProductsList is not empty %}
+                    {% for product in finalProductsList %}
+                        <div class="col-md-4 cup-in">
+                            <a href="{{ path('single', {'id': product.id})  }}"><img src="{{ asset('bundles/main'~product.image.url) }}" class="img-responsive" alt=""></a>
+                            <p>Tchiebou poulet</p>
+                            <span class="dollar">69 DH</span>
+                            <div class="details-in">
+                                <a href="#" class="details">Details</a>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+
+
+
+
+
+
+                {#
+
                 <div class="col-md-4 cup-in">
                     <a href="{{ path('single') }}"><img src="{{ asset('bundles/main/images/gal6.jpg') }}" class="img-responsive" alt=""></a>
                     <p>Tchiebou poulet</p>
@@ -98,6 +120,9 @@
                     <div class="clearfix"> </div>
                 </div>
                 <div class="clearfix"> </div>
+
+                #}
+
             </div>
             <!---->
             <div class="browse">

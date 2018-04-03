@@ -1,0 +1,27 @@
+{% extends 'AFMPUserBundle:Layout:layout.html.twig' %}
+{% block content %}
+	<div class="relative">		
+		{% include 'AFMPInvoiceBundle:Invoice:header.html.twig' %}
+
+		<form action="" method="post" class="nomargin">
+			{{ form_widget(form._token) }}
+			<label>
+				Paiement du : 
+				{{ form_widget(form.paymentdate) }}
+			</label>
+			<div class="ecart10"></div>
+				{{ form_widget(form.type) }}
+			<div class="ecart10"></div>
+			<div class="small-3 columns" style="padding-left: 0px;">{{ form_widget(form.amount) }}</div>
+			<div class="small-9 columns" style="padding-right: 0px;">{{ form_widget(form.identifier) }}</div>
+			<br class="clear">
+			<div class="ecart10"></div>
+			<p style="text-align: right;" class="nomargin">
+				<button type="submit" class="red_button">Ajouter l'encaissement</button>
+			</p>
+		</form>
+		<div class="ecart20"></div>
+
+		{% include 'AFMPInvoiceBundle:Payment:listing.html.twig' %}
+	</div>
+{% endblock %}

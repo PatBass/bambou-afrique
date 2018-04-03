@@ -1,0 +1,34 @@
+{% set rt = app.request.get('_route') %}
+
+<h1 class="title">
+	{% if invoice.number and invoice.urlpdf %}
+		<span class="fa fa-check"></span>
+		Facture n°{{ invoice.number }}
+	{% else %}
+		<span class="fa fa-times"></span>
+		Facture
+	{% endif %}
+	<small>
+		<font class="green">
+			<span class="fa fa-caret-down"></span> <font id="invoice_tt_ttc_in" data-total-payement="{{ total_payment }}" style="font-weight: 500;">{{ total_payment|number_format(2) }}€</font>
+		</font>
+		<font class="red" style="margin-left: 10px;">
+			<span class="fa fa-caret-up"></span> <font id="invoice_tt_ttc_out" data-total-invoice="{{ invoice.amount }}" style="font-weight: 500;">{{ (invoice.amount - total_payment)|number_format(2) }}€</font>
+		</font>
+	</small>
+</h1>
+<h3 class="subtitle">
+	{% if invoice.number and invoice.urlpdf %}
+		<a href="{{ path('AFMPInvoiceBundle_download', { 'id': invoice.id }) }}" target="_blank" class="gray_button small"><span class="fa fa-download"></span> Télécharger la facture</a>
+	{% else %}
+		<a href="{{ path('AFMPInvoiceBundle_generate', { 'id': invoice.id }) }}" class="gray_button small"><span class="fa fa-file"></span> Editer la facture</a>
+	{% endif %}
+	{% if rt == "AFMPInvoiceBundle_show" %}{% set class = "red_button" %}{% else %}{% set class = "gray_button" %}{% endif %}
+	<a href="{{ path('AFMPInvoiceBundle_show', { 'id': invoice.id }) }}" class="{{ class }} small"><span class="fa fa-pencil"></span> Détail de la facture</a>
+	{% if rt == "AFMPInvoiceBundle_payment_show" %}{% set class = "red_button" %}{% else %}{% set class = "gray_button" %}{% endif %}
+	<a href="{{ path('AFMPInvoiceBundle_payment_show', { 'id': invoice.id }) }}" class="{{ class }} small"><span class="fa fa-money"></span> Les encaissements</a>
+</h3>
+<div class="hr"></div>
+{% if invoice.number == null %}
+	<a href="{{ path('AFMPInvoiceBundle_remove', { 'id': invoice.id }) }}" class="red_button remove_invoice small topright"><span class="fa fa-times"></span></a>
+{% endif %}

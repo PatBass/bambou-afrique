@@ -1,0 +1,35 @@
+<table class="nomargin" style="width: 100%;">
+	<thead>
+		<tr>
+			<th class="center" width="30">#</th>
+			<th>Libellé</th>
+			<th class="center" width="100">PU TTC</th>
+			<th class="center" width="100">TVA</th>
+			<th class="center" width="100">Quantité</th>
+			<th width="30"></th>
+		</tr>
+	</thead>
+	<tbody id="sort_lines" data-url="{{ path('AFMPInvoiceBundle_sort_line') }}">
+		{% for key, formln in formInvoiceLine %}
+			<tr data-ref="{{ formln.vars.data.id }}">
+				<td><button type="button" class="gray_button small nomargin move"><span class="fa fa-arrows-v move"></span></button></td>
+				<td>
+					{{ form_widget(formln.libelle) }}
+				</td>
+				<td class="invoice_ln_amount">{{ form_widget(formln.amount, { 'value': (formln.vars.data.amount * (1 + (formln.vars.data.tax / 100))) | round(2) }) }}</td>
+				<td class="invoice_ln_tax">{{ form_widget(formln.tax) }}</td>
+				<td class="invoice_ln_quantity">{{ form_widget(formln.quantity) }}</td>
+				<td>
+					<a href="{{ path('AFMPInvoiceBundle_remove_line', { 'id': formln.vars.data.id }) }}" class="remove_ln gray_button small nomargin"><span class="fa fa-times"></span></a>
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+<div class="ecart10"></div>
+
+<div class="right">
+	<p class="nomargin" style="text-align: right;">Total HT : <b class="invoice_tt_ht arial"></b></p>
+	<p class="nomargin" style="text-align: right;">Total TVA : <b class="invoice_tt_tax arial"></b></p>
+	<p class="nomargin" style="text-align: right;">Total TTC : <b class="invoice_tt_ttc arial"></b></p>
+</div>

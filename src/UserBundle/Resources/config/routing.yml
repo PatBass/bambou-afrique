@@ -1,0 +1,9 @@
+## Overriding fos routes ##
+UserBundle_fos_import:
+    resource: "@UserBundle/Resources/config/routing/fos.yml"
+    prefix: /
+
+## Dispatcher ##
+UserBundle_dispatch:
+    pattern: /
+    defaults: { _controller: "UserBundle:Dispatch:index" }

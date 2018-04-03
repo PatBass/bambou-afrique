@@ -1,0 +1,65 @@
+## Find invoices ##
+AFMPInvoiceBundle_listing:
+    pattern: /
+    defaults: { _controller: "AFMPInvoiceBundle:Invoice:listing" }
+
+## Create new invoice ##
+AFMPInvoiceBundle_create:
+    pattern: /creation
+    defaults: { _controller: "AFMPInvoiceBundle:Invoice:createDraft" }
+
+
+## Add invoice line ##
+AFMPInvoiceBundle_add_line:
+    pattern: /{id}/ajouter/ligne
+    defaults: { _controller: "AFMPInvoiceBundle:Invoice:addLine" }
+    requirements:
+        id: \d+
+
+
+## Display invoice form ##
+AFMPInvoiceBundle_show:
+    pattern: /{id}/voir
+    defaults: { _controller: "AFMPInvoiceBundle:Invoice:show" }
+    requirements:
+        id: \d+
+
+
+
+## Remove invoice line ##
+AFMPInvoiceBundle_remove_line:
+    pattern: /{id}/supprimer/ligne
+    defaults: { _controller: "AFMPInvoiceBundle:Invoice:removeLine" }
+    requirements:
+        id: \d+
+
+## Sort invoice line ##
+AFMPInvoiceBundle_sort_line:
+    pattern: /trier/lignes
+    defaults: { _controller: "AFMPInvoiceBundle:Invoice:sortLines" }
+
+## Remove invoice ##
+AFMPInvoiceBundle_remove:
+    pattern: /{id}/supprimer
+    defaults: { _controller: "AFMPInvoiceBundle:Invoice:remove" }
+    requirements:
+        id: \d+
+
+## Generate invoice PDF ##
+AFMPInvoiceBundle_generate:
+    pattern: /{id}/generer
+    defaults: { _controller: "AFMPInvoiceBundle:Invoice:generate" }
+    requirements:
+        id: \d+
+
+## Download PDF ##
+AFMPInvoiceBundle_download:
+    pattern: /download/{id}-afmp.pdf
+    defaults: { _controller: "AFMPInvoiceBundle:Invoice:download" }
+    requirements:
+        id: \d+
+
+## Download searched invoices  ##
+AFMPInvoiceBundle_search_download:
+    pattern: /telecharger
+    defaults: { _controller: "AFMPInvoiceBundle:Invoice:downloadSearch" }

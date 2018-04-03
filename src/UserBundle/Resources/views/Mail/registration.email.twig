@@ -1,0 +1,36 @@
+{% extends 'AFMPClientBundle:Mail:base.email.twig' %}
+
+{% block content %}
+    <p>
+        Bienvenue à l'AFMP,
+        <br><br>
+        Votre inscription vient d'être validée.
+        <br><br>
+        Vous pouvez dès maintenant vous connecter sur <a href="{{ app.request.schemeAndHttpHost ~ path('AFMPFilingBundle_dashboard') }}">votre espace utilisateur</a> pour remplir votre dossier avec votre adresse email comme identifiant : {{ user.email }}.
+    </p>
+{% endblock %}
+
+
+
+
+{% extends "::Layout/layout.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block title %}Inscription - {{ parent() }} - Casablanca{% endblock %}
+{% block body %}
+    {% include('MainBundle:Common:header.html.twig') with { active: ''} %}
+
+
+    <div class="row">
+        <p>
+            Bienvenue à l'AFMP,
+            <br><br>
+            Votre inscription vient d'être validée.
+            <br><br>
+            Vous pouvez dès maintenant vous connecter sur <a href="{{ app.request.schemeAndHttpHost ~ path('AFMPFilingBundle_dashboard') }}">Votre espace utilisateur</a> pour remplir votre dossier avec votre adresse email comme identifiant : {{ user.email }}.
+        </p>
+    </div>
+{% endblock %}
+{% block footer %}
+    {% include('MainBundle:Common:footer.html.twig') %}
+{% endblock %}
+{% block javascripts %}{% endblock %}

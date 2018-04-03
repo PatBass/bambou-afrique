@@ -3,6 +3,11 @@ main:
     prefix:    /
     type:      annotation
 
+test:
+    resource: "@MainBundle/Controller/TestController.php"
+    prefix:    /
+    type:      annotation
+
 
 
 

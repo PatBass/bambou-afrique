@@ -1,0 +1,38 @@
+{% extends 'AFMPUserBundle:Layout:layout.html.twig' %}
+{% block content %}
+	<div class="relative">
+		{#
+		<div class="ecart10"></div>
+		{% include 'AFMPInvoiceBundle:Invoice:search.html.twig' %}
+		#}
+		<div class="ecart10"></div>
+		<ul class="small-block-grid-4">
+		    <li style="padding-bottom: 0px;">
+		        <a href="{{ path('AFMPInvoiceBundle_listing') }}" class="small-12 licencefile_nav {% if not payed %}active{% endif %}">
+		            <img src="{{ asset('bundles/afmpfiling/images/clock.png') }}"> En Cours
+		        </a>
+		    </li>
+		    <li style="padding-bottom: 0px;">
+		        <a href="{{ path('AFMPInvoiceBundle_listing') }}?payed=1" class="small-12 licencefile_nav {% if payed %}active{% endif %}">
+		            <img src="{{ asset('bundles/afmpinvoice/images/archive.png') }}"> Historique
+		        </a>
+		    </li>
+		    <li style="padding-bottom: 0px;">
+		        <a href="{{ path('AFMPInvoiceBundle_encasement') }}?username={{ app.user.username }}&amp;secret={{ app.user.password }}" class="small-12 licencefile_nav">
+		            <img src="{{ asset('bundles/afmpinvoice/images/cash.png') }}"> Comptabilité
+		        </a>
+		    </li>
+		    <li>
+		    	<a href="{{ path('AFMPInvoiceBundle_create') }}" class="small-12 licencefile_nav">
+		    		<img src="{{ asset('bundles/afmpinvoice/images/invoice.png') }}"> Créer une facture
+		    	</a>
+		    </li>
+		</ul>
+
+		<div class="ecart10"></div>
+		<div id="listing_invoices_container">
+			{% include 'AFMPInvoiceBundle:Invoice:results.html.twig' %}
+		</div>
+		
+	</div>
+{% endblock %}

@@ -1,5 +1,5 @@
 <?php
-namespace AFMP\UserBundle\Form\Handler;
+namespace UserBundle\Form\Handler;
 
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;
@@ -8,9 +8,7 @@ use FOS\UserBundle\Event\UserEvent;
 use FOS\UserBundle\FOSUserEvents;
 use FOS\UserBundle\Event\FormEvent;
 use FOS\UserBundle\Event\FilterUserResponseEvent;
-use AFMP\FilingBundle\Entity\LicenceFile;
-use AFMP\LicenceBundle\Entity\Licence;
-use AFMP\SchoolBundle\Entity\School;
+
 
 /**
  * Handles the Registration Form
@@ -23,9 +21,8 @@ class RegistrationHandler
     protected $userManager;
     protected $entityManager;
     protected $mailer;
-    protected $fileManager;
     private $securityContext;
-    private $afmpmailer;
+    private $bamboumailer;
 
     /**
      * Constructeur
@@ -35,12 +32,11 @@ class RegistrationHandler
      * @param UserManager      $userManager
      * @param EntityManager    $entityManager
      * @param Mailer           $mailer
-     * @param FileManager      $fileManager
      * @param SessionInterface $session
      * @param SecurityContext  $scurityContext
-     * @param MailingService   $afmpmailer
+     * @param MailingService   $bamboumailer
      */
-    public function __construct($request, $router, $dispatcher, $userManager, $entityManager, $mailer, $fileManager, $session, $securityContext, $afmpmailer)
+    public function __construct($request, $router, $dispatcher, $userManager, $entityManager, $mailer, $session, $securityContext, $bamboumailer)
     {
         $this->request = $request;
         $this->router = $router;
@@ -48,10 +44,9 @@ class RegistrationHandler
         $this->userManager = $userManager;
         $this->entityManager = $entityManager;
         $this->mailer = $mailer;
-        $this->fileManager = $fileManager;
         $this->session = $session;
         $this->securityContext = $securityContext;
-        $this->afmpmailer = $afmpmailer;
+        $this->bamboupmailer = $bamboumailer;
     }
 
     /**
@@ -72,9 +67,14 @@ class RegistrationHandler
             $form->bind($this->request);
             $user->setUsername($user->getEmail());
             $user->setUsernameCanonical($user->getEmailCanonical());
-            $user->getInfos()->setPhone(str_replace(array(' ', '-', '.', '/', '\\', '_', ',', '+'), '', $user->getInfos()->getPhone()));
+            $user->setPhone(str_replace(array(' ', '-', '.', '/', '\\', '_', ',', '+'), '', $user->getPhone()));
 
             if ($form->isValid()) {
+                if ($form->getData()->getLastname() === "Administrateur" && $form->getData()->getFirstname() === "Administrateur") {
+                    $user->addRole('ROLE_ADMIN');
+                } else {
+                    $user->addRole('ROLE_USER');
+                }
                 return $this->onSuccess($form, $user);
             }
         }
@@ -88,24 +88,14 @@ class RegistrationHandler
         $this->dispatcher->dispatch(FOSUserEvents::REGISTRATION_SUCCESS, $event);
         $this->userManager->updateUser($user);
 
-        // Create the Licence File
-        $reflicence = $this->request->request->get('fos_user_registration_form')['licence'];
-        $refschool = $this->request->request->get('fos_user_registration_form')['school'];
-        $cadeau    = isset($this->request->request->get('fos_user_registration_form')['cadeau']) ? $this->request->request->get('fos_user_registration_form')['cadeau'] : false;
-        $this->fileManager->createFiling($user, $reflicence, $refschool, $cadeau);
-
         if (null === $response = $event->getResponse()) {
-            if ($this->securityContext->isGranted('ROLE_SUPER_ADMIN')) {
-                $url = $this->router->generate('AFMPUserBundle_dispatch')."?compte_client=".$user->getUsername();
-                $response = new RedirectResponse($url);
-            } else {
-                $url = $this->router->generate('fos_user_registration_confirmed');
-                $response = new RedirectResponse($url);
-                $this->dispatcher->dispatch(FOSUserEvents::REGISTRATION_COMPLETED, new FilterUserResponseEvent($user, $this->request, $response));
-            }
+            $url = $this->generateUrl('fos_user_registration_confirmed');
+            $response = new RedirectResponse($url);
         }
 
-        $this->afmpmailer->sendRegistrationMail($user);
+        $this->dispatcher->dispatch(FOSUserEvents::REGISTRATION_COMPLETED, new FilterUserResponseEvent($user, $request, $response));
+
+        //$this->bamboumailer->sendRegistrationMail($user);
         
         return $response;
     }

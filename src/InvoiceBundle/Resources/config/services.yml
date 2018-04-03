@@ -1,0 +1,30 @@
+parameters:
+#    afmp_invoice.example.class: AFMP\InvoiceBundle\Example
+
+services:
+    afmpinvoice.search.form.handler:
+        class: AFMP\InvoiceBundle\Form\Handler\SearchHandler
+        arguments: ["@request"]
+        scope: request
+
+    afmpinvoice.invoice.form.handler:
+        class: AFMP\InvoiceBundle\Form\Handler\InvoiceHandler
+        arguments: ["@request", "@doctrine.orm.entity_manager", "@afmp.invoice_manager"]
+        scope: request
+
+    afmpinvoice.payment.form.handler:
+        class: AFMP\InvoiceBundle\Form\Handler\PaymentHandler
+        arguments: ["@request", "@doctrine.orm.entity_manager", "@afmp.invoice_manager"]
+        scope: request
+
+    afmp.invoice_manager:
+        class: AFMP\InvoiceBundle\Services\InvoiceManager
+        arguments: ["@doctrine.orm.entity_manager", "@twig", "@afmp.mailer"]
+
+    comptabilite.provider:
+        class: AFMP\InvoiceBundle\Security\ComptabiliteUserProvider
+        arguments: ["@doctrine.orm.entity_manager"]
+
+    comptabilite.authenticator:
+        class: AFMP\InvoiceBundle\Security\ComptabiliteAuthenticator
+        arguments: ["@comptabilite.provider"]

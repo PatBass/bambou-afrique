@@ -1,0 +1,72 @@
+{% extends 'AFMPInvoiceBundle:PDF:layout.pdf.twig' %}
+
+{% block number %}FACTURE N° {{ invoice.number }}{% endblock %}
+{% block date %}{{ invoice.invoicedate|date('d/m/Y') }}{% endblock %}
+{% block object %}{{ invoice.title }}{% endblock %}
+
+{% block client_address %}
+	{% if invoice.clientfirstname and invoice.clientlastname %}
+		<b>{{ invoice.clientlastname }} {{ invoice.clientfirstname }}</b><br>
+		{% if invoice.clientaddress.id is defined %}
+			{{ invoice.clientaddress.streetnumber }} {{ invoice.clientaddress.streetname }}<br>
+			{% if invoice.clientaddress.streetextension %}
+				{{ invoice.clientaddress.streetextension }}<br>
+			{% endif %}
+			{{ invoice.clientaddress.zipcode }} - {{ invoice.clientaddress.city }}
+		{% else %}
+			<br><br><br>
+		{% endif %}
+	{% else %}
+		{% if invoice.client.id is defined %}
+			<b>{{ invoice.client.lastname }} {{ invoice.client.firstname }}</b><br>
+			{% if invoice.client.address.id is defined %}
+				{{ invoice.client.address.streetnumber }} {{ invoice.client.address.streetname }}<br>
+				{% if invoice.client.address.streetextension %}
+					{{ invoice.client.address.streetextension }}<br>
+				{% endif %}
+				{{ invoice.client.address.zipcode }} - {{ invoice.client.address.city }}
+			{% else %}
+				<br><br><br>
+			{% endif %}
+		{% endif %}
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+	<table cellpadding="0" cellspacing="0" border="0" class="tablefacturation">
+		{% for line in invoice.lines %}
+			<tr>
+				<td class="designation"><p>{{ line.libelle|nl2br|raw }}</p></td>
+				<td class="pu"><p>{{ line.amount|number_format(2) }}</p></td>
+				<td class="quantite"><p>{{ line.quantity }}</p></td>
+				<td class="taxes"><p>{% if line.tax > 0 %}{{ line.tax }}%{% else %}-{% endif %}</p></td>
+				<td class="montantht"><p>{{ (line.quantity * line.amount)|number_format(2) }}</p></td>
+			</tr>
+		{% endfor %}
+	</table>
+
+	<end_last_page height="21">
+		<div style="width: 195.6mm; height: 20mm; border-radius: 3mm; border: 0.2mm solid #000; background-color: #FFF; position: absolute; bottom: 0mm; left: -3mm;">
+			<div style="position: absolute; bottom: 0mm; right: 3mm; width: 70mm; height: 20mm; border-left: 0.2mm solid #000000;">
+				<table cellpadding="0" cellspacing="0" border="0" style="margin: 0mm; width: 67mm; margin-left: 3mm; margin-top: 1.5mm;">
+					<tr>
+						<td style="width: 35mm;"><p style="font-size: 11pt; font-family: Arial; text-align: left; font-weight: bold;">Total HT :</p></td>
+			 			<td style="width: 32mm;"><p style="font-size: 11pt; font-family: Arial; text-align: right; font-weight: bold;">{{ total.ht|number_format(2) }} €</p></td>
+					</tr>
+					<tr>
+						<td style="width: 35mm;"><p style="font-size: 10pt; font-family: Arial; text-align: left;">TVA :</p></td>
+						<td style="width: 32mm;"><p style="font-size: 10pt; font-family: Arial; text-align: right;">{{ total.tva|number_format(2) }} €</p></td>
+					</tr>
+					<tr>
+						<td style="width: 35mm;"><p style="font-size: 10pt; font-family: Arial; text-align: left; font-weight: normal;">Montant TTC :</p></td>
+						<td style="width: 32mm;"><p style="font-size: 10pt; font-family: Arial; text-align: right; font-weight: normal;">{{ total.ttc|number_format(2) }} €</p></td>
+					</tr>
+					<tr>
+						<td style="width: 35mm;"><p style="font-size: 12pt; font-family: Arial; text-align: left; font-weight: bold;">Net à Payer :</p></td>
+						<td style="width: 32mm;"><p style="font-size: 12pt; font-family: Arial; text-align: right; font-weight: bold;">{{ total.ttc|number_format(2) }} €</p></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</end_last_page>
+{% endblock %}

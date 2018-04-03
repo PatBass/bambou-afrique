@@ -1,7 +1,7 @@
 {% extends "::Layout/layout.html.twig" %}
 {% block title %}{{ parent() }} - Casablanca{% endblock %}
 {% block body %}
-    {% include('MainBundle:Common:header.html.twig') %}
+    {% include('MainBundle:Common:header.html.twig') with {active: 'galery'} %}
     <!--========================================================
                            CONTENT
  =========================================================-->

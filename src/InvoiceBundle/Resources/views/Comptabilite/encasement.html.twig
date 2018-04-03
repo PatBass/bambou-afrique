@@ -1,0 +1,102 @@
+{% extends 'AFMPInvoiceBundle:Comptabilite:layout.html.twig' %}
+{% block content %}
+    {% include 'AFMPInvoiceBundle:Comptabilite:form.html.twig' %}
+
+    <div class="small-7 columns" id="content_listing_encasements">
+        {% if payments|length == 0 %}
+            <div class="warning">Aucun mouvement sur cette période.</div>
+        {% endif %}
+        {% set dateencasement = "" %}
+        {% set caencasement = 0 %}
+        {% set invoices_url = [] %}
+        {% set invoices_ref = [] %}
+        {% set totaltva = 0 %}
+        {% set totalttc = 0 %}
+
+        {% for p in payments %}
+            {% set caencasement = caencasement + p.amount %}
+            {% if dateencasement != p.paymentdate|date('Ymd') %}
+                {% if dateencasement != "" %}</table></div></div>{% endif %}
+                {% set dateencasement = p.paymentdate|date('Ymd') %}
+                <div class="container_encasements">
+                    <div class="encasement_title_container" data-date="{{ p.paymentdate|date('Y-m-d') }}">
+                        <h1><span class="fa fa-caret-right"></span> Encaissements du {{ p.paymentdate|date('d/m/Y') }}</h1>
+                        {% set totalCheck = 0 %}{% set totalBankwire = 0 %}{% set totalCash = 0 %}{% set totalCb = 0 %}
+                        {% for ptmp in payments %}
+                            {% if ptmp.paymentdate|date('Ymd') == dateencasement %}
+                                {% if ptmp.check %}{% set totalCheck = totalCheck + ptmp.amount %}
+                                {% elseif ptmp.bankwire %}{% set totalBankwire = totalBankwire + ptmp.amount %}
+                                {% elseif ptmp.cash %}{% set totalCash = totalCash + ptmp.amount %}
+                                {% elseif ptmp.creditcard %}{% set totalCb = totalCb + ptmp.amount %}{% endif %}
+                            {% endif %}
+                        {% endfor %}
+                        <p class="line_total_encasement_chq" data-total="{{ totalCheck }}">CHQ : {{ totalCheck|number_format(2) }}€</p>
+                        <p class="line_total_encasement_esp" data-total="{{ totalCash }}">ESP : {{ totalCash|number_format(2) }}€</p>
+                        <p class="line_total_encasement_vir" data-total="{{ totalBankwire }}">VIR : {{ totalBankwire|number_format(2) }}€</p>
+                        <br class="clear">
+                    </div>
+                    <div class="encasement_line_container">
+                        <table border="0" cellpadding="0" cellspacing="0">
+            {% endif %}
+
+            <tr>
+                <td>{{ p.invoice.client.gender }} {{ p.invoice.client.lastname }}</td>
+                <td style="text-align: center;">
+                    {% if p.check %}CHQ
+                    {% elseif p.bankwire %}VIR
+                    {% elseif p.cash %}ESP
+                    {% elseif p.creditcard %}CB{% endif %}
+                    {% if not p.cash %}
+                        N°{{ p.identifier }}
+                    {% endif %}
+                </td>
+                <td style="text-align: right;">{{ p.amount|number_format(2) }}</td>
+                <td style="text-align: center;">{% if p.invoice.number %}Facture N°{{ p.invoice.number }}{% else %}Accompte{% endif %}</td>
+                <td width="50" style="text-align: center;">
+                    {% if p.invoice.number %}
+                        {% set invoices_url = invoices_url|merge([p.invoice.urlpdf]) %}
+                        {% if p.invoice.id not in invoices_ref %}
+                            {% set invoices_ref = invoices_ref|merge([p.invoice.id]) %}
+                            {% set tmpht = 0 %}
+                            {% for ln in p.invoice.lines %}
+                                {% set tmpht = tmpht + ln.amount %}
+                            {% endfor %}
+                            {% if p.invoice.invoicedate|date('Ymd') >= d1|date('Ymd') and p.invoice.invoicedate|date('Ymd') <= d2|date('Ymd') %}
+                                {% set totaltva = totaltva + (p.invoice.amount - tmpht) %}
+                                {% set totalttc = totalttc + p.invoice.amount %}
+                            {% endif %}
+                        {% endif %}
+
+                        <a href="{{ asset(p.invoice.urlpdf) }}" target="_blank" class="gray_button small"><span class="fa fa-download"></span></a>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        {% if payments|length > 0 %}
+            </table></div></div>
+        {% endif %}
+    </div>
+
+    <div class="small-5 columns" id="encasement_stats_container">
+        <div id="stats_encasement">
+            <h2><span class="fa fa-star"></span> Chiffre d'affaire encaissé : <b>{{ caencasement|number_format(2) }} €</b></h2>
+            <h2><span class="fa fa-warning"></span> TVA collectée : <b>{{ totaltva|number_format(2) }} €</b></h2>
+            {% if invoices_ref|length > 0 %}
+                <div class="ecart10"></div>
+                <p>Nombre de facture : <b>{{ invoices_ref|length }}</b></p>
+                <p>Moyenne de facturation : <b>{{ (totalttc / invoices_ref|length)|round(2) }} €</b></p>
+                <div class="ecart10"></div>
+                <form action="{{ path('AFMPInvoiceBundle_encasement_dl_invoice') }}?username={{ username }}&amp;secret={{ secret }}" method="post">
+                    {% for url in invoices_url %}
+                        <input type="hidden" value="{{ url }}" name="files[]">
+                    {% endfor %}
+                    <p style="text-align: center; margin: 0px;">
+                        <button type="submit" class="red_button"><span class="fa fa-download"></span> Télécharger les factures</button>
+                    </p>
+                </form>
+            {% endif %}
+        </div>
+        <div id="line_encasement_chart"></div>
+        <div id="donut_repartition_encasement"></div>
+    </div>
+{% endblock %}

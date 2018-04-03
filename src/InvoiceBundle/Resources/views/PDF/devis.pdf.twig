@@ -1,0 +1,55 @@
+{% extends 'AFMPInvoiceBundle:PDF:layout.pdf.twig' %}
+
+{% block number %}DEVIS du {{ "now"|date('d/m/Y') }}{% endblock %}
+{% block date %}{{ "now"|date('d/m/Y') }}{% endblock %}
+{% block object %}Devis : {{ licence.title }}{% endblock %}
+
+{% block client_address %}
+	<br><br><br><br><br>
+{% endblock %}
+
+{% block content %}
+	<table cellpadding="0" cellspacing="0" border="0" class="tablefacturation">
+		{# {% set totalttc = 0 %}
+		{% set totalht = 0 %}
+		{% set totaltva = 0 %} #}
+		{% for rel in licence.licenceproducts %}
+			{% set line = rel.product %}
+			{# {% set totalht = totalht + line.price %}
+			{% set totalttc = totalttc + (line.price * ( 1 + (line.tax / 100) )) %}
+			{% set totaltva = totaltva + (line.price * (line.tax / 100) ) %} #}
+			<tr>
+				<td class="designation"><p><b>{{ line.title|nl2br|raw }}</b><br>{{ line.description|nl2br|raw }}</p></td>
+				<td class="pu"><p>{{ line.price|number_format(2) }}</p></td>
+				<td class="quantite"><p>1</p></td>
+				<td class="taxes"><p>{% if line.tax > 0 %}{{ line.tax }}%{% else %}-{% endif %}</p></td>
+				<td class="montantht"><p>{{ line.price|number_format(2) }}</p></td>
+			</tr>
+		{% endfor %}
+	</table>
+
+	<end_last_page height="21">
+		<div style="width: 195.6mm; height: 20mm; border-radius: 3mm; border: 0.2mm solid #000; background-color: #FFF; position: absolute; bottom: 0mm; left: -3mm;">
+			<div style="position: absolute; bottom: 0mm; right: 3mm; width: 70mm; height: 20mm; border-left: 0.2mm solid #000000;">
+				<table cellpadding="0" cellspacing="0" border="0" style="margin: 0mm; width: 67mm; margin-left: 3mm; margin-top: 1.5mm;">
+					<tr>
+						<td style="width: 35mm;"><p style="font-size: 11pt; font-family: Arial; text-align: left; font-weight: bold;">Total HT :</p></td>
+			 			<td style="width: 32mm;"><p style="font-size: 11pt; font-family: Arial; text-align: right; font-weight: bold;">{{ total.ht|number_format(2) }} €</p></td>
+					</tr>
+					<tr>
+						<td style="width: 35mm;"><p style="font-size: 10pt; font-family: Arial; text-align: left;">TVA :</p></td>
+						<td style="width: 32mm;"><p style="font-size: 10pt; font-family: Arial; text-align: right;">{{ total.tva|number_format(2) }} €</p></td>
+					</tr>
+					<tr>
+						<td style="width: 35mm;"><p style="font-size: 10pt; font-family: Arial; text-align: left; font-weight: normal;">Montant TTC :</p></td>
+						<td style="width: 32mm;"><p style="font-size: 10pt; font-family: Arial; text-align: right; font-weight: normal;">{{ total.ttc|number_format(2) }} €</p></td>
+					</tr>
+					<tr>
+						<td style="width: 35mm;"><p style="font-size: 12pt; font-family: Arial; text-align: left; font-weight: bold;">Net à Payer :</p></td>
+						<td style="width: 32mm;"><p style="font-size: 12pt; font-family: Arial; text-align: right; font-weight: bold;">{{ total.ttc|number_format(2) }} €</p></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</end_last_page>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% if invoices|length > 0 %}
+	{% set preparedZipFiles = [] %}
+	<h3 id="invoices_result_title">
+		{{ invoices|length }} facture{% if invoices|length > 1 %}s{% endif %}
+		<small>{{ total|number_format(2) }} €</small>
+	</h3>
+	<table id="invoices_results">
+		<thead>
+			<tr>
+				<th style="text-align: center;">#</th>
+				<th>Client</th>
+				<th>Libellé</th>
+				<th style="text-align: center;">Date</th>
+				<th style="text-align: center;">Editée</th>
+				<th style="text-align: center;">Payée</th>
+				<th style="text-align: right;">Total TTC</th>
+				<th width="100"></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% set monthYear = "" %}
+			{% for invoice in invoices %}
+				{% if invoice.invoicedate|txt_month ~ " " ~ invoice.invoicedate|date('Y') != monthYear %}
+					{% set monthYear = invoice.invoicedate|txt_month ~ " " ~ invoice.invoicedate|date('Y') %}
+					<tr>
+						<td colspan="8" align="center" style="background-color: #666666; color: #ffffff; font-size: 24px; font-weight: bold;">{{ monthYear }}</td>
+					</tr>
+				{% endif %}
+				{% if invoice.urlpdf %}{% set preparedZipFiles = preparedZipFiles|merge([invoice.urlpdf]) %}{% endif %}
+				<tr>
+					<td align="center" class="arial">{% if invoice.number %}{{ invoice.number }}{% else %}-{% endif %}</td>
+					<td>
+						{% if (invoice.client.lastname is defined and invoice.client.lastname) %}
+							{{ invoice.client.lastname|upper }} {{ invoice.client.firstname }}
+						{% else %}
+							-
+						{% endif %}
+					</td>
+					<td>{{ invoice.title }}</td>
+					<td align="center" class="arial">{{ invoice.invoicedate|date('d/m/Y') }}</td>
+					<td align="center">
+						{% if invoice.urlpdf %}
+							<span class="fa fa-check" style="color: #090; font-size: 24px;"></span>
+						{% else %}
+							<span class="fa fa-times" style="color: #900; font-size: 24px;"></span>
+						{% endif %}
+					</td>
+					<td align="center">
+						{% if invoice.completpayment %}
+							<span class="fa fa-check" style="color: #090; font-size: 24px;"></span>
+						{% else %}
+							<span class="fa fa-times" style="color: #900; font-size: 24px;"></span>
+						{% endif %}
+					</td>
+					<td align="right" class="arial">{{ invoice.amount|number_format(2) }} €</td>
+					<td align="center">
+						{% if invoice.urlpdf %}
+							<a href="{{ path('AFMPInvoiceBundle_download', { 'id': invoice.id }) }}" target="_blank" class="gray_button small"><span class="fa fa-download"></span></a>
+						{% endif %}
+						<a href="{{ path('AFMPInvoiceBundle_show', { 'id': invoice.id }) }}" class="gray_button small"><span class="fa fa-plus"></span></a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<div class="ecart20"></div>
+
+	{% if preparedZipFiles|length > 0 %}
+		<form action="{{ path('AFMPInvoiceBundle_search_download') }}" method="post">
+			{% for file in preparedZipFiles %}
+				<input type="hidden" value="{{ file }}" name="files[]">
+			{% endfor %}
+			<p style="text-align: right;"><button type="submit" class="red_button"><span class="fa fa-download"></span> Télécharger les factures</button></p>
+		</form>
+	{% endif %}
+{% else %}
+	<p style="text-align: center;">Vous n'avez pas de facture correspondant à votre recherche.</p>
+{% endif %}

@@ -1,4 +1,60 @@
+parameters:
+#    bambou_user.example.class: UserBundle\Example
+
 services:
-#    user.example:
-#        class: UserBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+    se.slugify:
+        class: UserBundle\Services\Slugify
+    se.file:
+        class: UserBundle\Services\File
+        arguments: ["@se.slugify", "%kernel.root_dir%"]
+
+    kernel.listener.bambou.login:
+        class: UserBundle\Services\LoginListener
+        tags:
+            - { name: kernel.event_listener, event: security.interactive_login, method: loginSuccess }
+        arguments: [@router, @security.context, @session, @event_dispatcher]
+
+    bambou_user.registration.form.type:
+        class: UserBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: bambou_user_registration }
+
+    bambou_user.registration_handler:
+        class: UserBundle\Form\Handler\RegistrationHandler
+        scope: request
+        arguments: [@request, @router, @event_dispatcher, @fos_user.user_manager, @doctrine.orm.entity_manager, @mailer, @session, @security.context, @bambou.mailer]
+
+    bambou_user.profile.form.type:
+        class: UserBundle\Form\Type\ProfileFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: bambou_user_profile }
+    bambou_user.profile_handler:
+        class: UserBundle\Form\Handler\ProfileHandler
+        scope: request
+        arguments: [@request, @router, @event_dispatcher, @fos_user.user_manager, @doctrine.orm.entity_manager, @mailer]
+
+## Champs de formulaire custom
+    form.type.datepicker:
+        class: UserBundle\Form\Model\DatePickerType
+        tags:
+            - { name: form.type, alias: datepicker }
+
+    form.type.colorpicker:
+        class: UserBundle\Form\Model\ColorPickerType
+        tags:
+            - { name: form.type, alias: colorpicker }
+
+## Twig extensions
+    bambou.twig.extension:
+        class: UserBundle\Twig\Extension\TwigExtension
+        arguments: [@bambou.calendar]
+        tags:
+            - { name: twig.extension }
+
+## Imagine filter
+    liip_imagine.filter.loader.upscale_crop:
+        class: UserBundle\Imagine\UpscaleCropFilter
+        tags: 
+            - { name: liip_imagine.filter.loader, loader: upscale_crop }

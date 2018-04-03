@@ -1,6 +1,7 @@
 <?php
-namespace AFMP\UserBundle\Services;
+namespace UserBundle\Services;
 
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\Security\Http\Event\InteractiveLoginEvent;
 use Symfony\Component\Routing\Router;
@@ -13,7 +14,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 /**
  * Listen login was successfully
  *
- * @author Mikael SERREAU <mikael@squareeyes.fr>
+ * @author Patrick BASSOUKISSA <patrickbassoukissa@gmail.com>
  */
 class LoginListener
 {
@@ -44,13 +45,15 @@ class LoginListener
     public function loginSuccess(InteractiveLoginEvent $event)
     {
         $user = $this->securityContext->getToken()->getUser();
-        if ($user->hasRole('ROLE_SUPER_ADMIN')) {
-            if (count($user->getSchools()) > 0) {
-                $this->session->set('school', $user->getSchools()[0]);
-            }
+
+        return $this->router->generate('index1');
+        /*$if ($user->hasRole('ROLE_ADMIN')) {
+            return new Response('Compte Admin');
+        } else {
+            return new Response('Page de profil utilisateur');
         }
 
-        $this->dispatcher->addListener(KernelEvents::RESPONSE, array($this, 'redirection'));
+        $this->dispatcher->addListener(KernelEvents::RESPONSE, array($this, 'redirection'));*/
     }
 
     /**
@@ -59,7 +62,7 @@ class LoginListener
      */
     public function redirection(FilterResponseEvent $event)
     {
-        $response = new RedirectResponse($this->router->generate('AFMPUserBundle_dispatch'));
+        $response = new RedirectResponse($this->router->generate('index1'));
         $event->setResponse($response);
     }
 }
