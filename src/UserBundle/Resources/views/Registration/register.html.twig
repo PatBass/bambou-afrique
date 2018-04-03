@@ -1,0 +1,49 @@
+{% extends 'AFMPUserBundle:Layout:offline_layout.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block content %}
+    <h1><span class="fa fa-pencil"></span> Inscription au permis</h1>
+    <form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+
+        {{ form_widget(form._token) }}
+
+        {% if app.request.query.get('refschool') %}
+            <div>{{ form_widget(form.school, { 'attr': { 'placeholder': 'Choisir une école ...' }, 'value': app.request.query.get('refschool') }) }}<div class="ecart10"></div></div>
+        {% else %}
+            <div>{{ form_widget(form.school, { 'attr': { 'placeholder': 'Choisir une école ...' } }) }}<div class="ecart10"></div></div>
+        {% endif %}
+
+        {% if app.request.query.get('reflicence') %}
+            <div>{{ form_widget(form.licence, { 'attr': { 'placeholder': 'Choisir un permis ...' }, 'value': app.request.query.get('reflicence') }) }}<div class="ecart10"></div></div>
+        {% else %}
+            <div>{{ form_widget(form.licence, { 'attr': { 'placeholder': 'Choisir un permis ...' } }) }}<div class="ecart10"></div></div>
+        {% endif %}
+        
+        {{ form_widget(form.email, { 'attr': { 'placeholder': 'Votre adresse email ...' } }) }}
+        {{ form_errors(form.email) }}
+        <div class="ecart10"></div>
+
+        <div class="small-6 columns" style="padding-left: 0px;">{{ form_widget(form.plainPassword.first, { 'attr': { 'placeholder': 'Mot de passe ...' } }) }}</div>
+        <div class="small-6 columns" style="padding-right: 0px;">{{ form_widget(form.plainPassword.second, { 'attr': { 'placeholder': 'Vérification ...' } }) }}</div>
+        <br class="clear">
+        {{ form_errors(form.plainPassword.first) }}
+        <div class="ecart10"></div>
+
+        {{ form_widget(form.infos.phone, { 'attr': { 'placeholder': 'N° de téléphone ...' } }) }}
+        {{ form_errors(form.infos.phone) }}
+        <div class="ecart10"></div>
+
+        {# {% if is_granted('ROLE_SUPER_ADMIN') %}
+            <div class="ecart20"></div>
+            {{ form_widget(form.cadeau) }}
+            {{ form_label(form.cadeau) }}
+        {% endif %} #}
+
+        {{ form_errors(form) }}
+        <p style="text-align: right; margin: 0px;"><input class="red_button" type="submit" value="{{ 'registration.submit'|trans }}" /></p>
+    </form>
+{% endblock %}
+
+{% block under %}
+    <a href="{{ path('fos_user_security_login') }}">J'ai déjà un compte</a>
+{% endblock %}
