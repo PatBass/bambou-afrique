@@ -11,7 +11,7 @@
             <div class="header-top">
                 <div class="header-top-in">
                     <ul class="header-grid">
-                        <li ><a href="{{ path('account') }}">Mon Compte   </a> <label>/</label></li>
+                        <!--<li ><a href="{{ path('account') }}">Mon Compte   </a> <label>/</label></li>-->
                         {% if app.user %}
                             <li class="green-bold">Bonjour {{ app.user.firstName }}</li>
                         {% else %}
@@ -27,7 +27,7 @@
                 </div>
                 <ul class="grid-header"><!--
 					<li><a href="account.html">My Account</a> <label>/</label></li> -->
-                    <li><a href="#">Mon panier</a> <label>/</label></li>
+                    <li><a href="{{ path('cart') }}">{% render(controller('MainBundle:Cart:cartCount')) %}<span class="cart">Mon panier</span></a> <label>/</label></li>
                     <li><a href="{{ path('checkout') }}">  Passer la commande </a> </li>
                 </ul>
                 <div class="clearfix"> </div>
@@ -45,10 +45,7 @@
 
                 </div>
                 <div class="search">
-                    <form>
-                        <input type="text" value="Search store here ..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" >
-                        <input type="submit" value="">
-                    </form>
+                    {% render(controller('MainBundle:Main:search')) %}
                 </div>
                 <div class="clearfix"> </div>
             </div>

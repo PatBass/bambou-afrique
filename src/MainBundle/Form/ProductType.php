@@ -20,7 +20,12 @@ class ProductType extends AbstractType
         $builder
             ->add('title',       'text')
             ->add('description',     'ckeditor')
-            ->add('image',        new ImageType(), array('required' => false))
+            ->add('productFile',        'vich_file', array(
+                'mapping'       => 'product_images',
+                'allow_delete'  => true,
+                'download_link' => true,
+                'label' => false,
+            ))
             ->add('vat',       'number')
             ->add('price',       'number')
             ->add('categories',  'text', array(

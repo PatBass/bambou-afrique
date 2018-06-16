@@ -10,26 +10,44 @@
     <div class="container" style="padding-top: 100px;">
         <div class="contact">
             <div class="contact-in">
+                <div class="row">
+                    <div class="col-ms-offset-4 col-ms-5">
+                        {% if app.session.flashbag.has('notice') %}
+                            <div class="alert alert-success">
+                                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+                                {% for message in app.session.flashbag.get('notice') %}
+                                    {% if loop.first %}
+                                        <center>{{  message }}</center>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
                 <h2>contact</h2>
                 <div class=" col-md-9 contact-left">
 
-                    <form >
+                    {{ form_start(form, {'attr': { 'action': path('contact'), 'method':'POST', 'id':'form'}}) }}
                         <div>
                             <span>Nom</span>
-                            <input name="userName" type="text" class="textbox">
+                            {{ form_widget(form.name,  {'attr': {'placeholder':'Votre Nom', 'title':'Votre Nom', 'class':'form-control textbox', 'required':'required', 'maxlength':'255'}}) }}
+                            {{ form_errors(form.name) }}
                         </div>
                         <div>
                             <span>E-Mail</span>
-                            <input name="userEmail" type="text" class="textbox">
+                            {{ form_widget(form.email,  {'attr': {'placeholder':'Votre e-mail', 'title':'Votre e-mail', 'class':'form-control textbox', 'required':'required', 'maxlength':'255'}}) }}
+                            {{ form_errors(form.email) }}
                         </div>
                         <div>
-                            <span>Sujet</span>
-                            <textarea name="userMsg"> </textarea>
+                            <span>Message</span>
+                            {{ form_widget(form.message,  {'attr': {'placeholder':'Votre Message', 'required':'required', 'class':'form-control contact'}}) }}
+                            {{ form_errors(form.message) }}
                         </div>
                         <div>
                             <span><input type="submit" value="Envoyer"></span>
                         </div>
-                    </form>
+                    {{ form_rest(form) }}
+                    {{  form_end(form) }}
                 </div>
 
                 <div class=" col-md-3 contact-right">

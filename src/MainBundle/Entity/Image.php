@@ -44,6 +44,10 @@ class Image
 
     private $tempFilename;
 
+    public function __toString() {
+        return get_class($this);
+    }
+
     /**
      * @ORM\PrePersist()
      * @ORM\PreUpdate()

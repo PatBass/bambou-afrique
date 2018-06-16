@@ -12,16 +12,18 @@
             <h2>Specialités</h2>
             <div class="row">
                 <div class="">
+
                     {% if specialityList is not empty %}
-                        {% for speciality in specialityList %}
-                            <div class="col-md-3 special-in">
-                                <a href="{{ path('speciality', {'category' : speciality.title}) }}" >
-                                    <img src="{{ asset('bundles/main/images'~speciality.image.url) }}" class="img-responsive" alt="">
+                        {% for key, value in specialityList %}
+                            <div class="col-sm-3 col-md-4">
+                                <a href="{{ path('speciality', {'category' : value.title}) }}" >
+                                    <img src="{{ asset('images/'~value.specialitylistName) }}" class="img-responsive" alt="">
                                 </a>
-                                <h5><a href="{{ path('speciality', {'category' : speciality.title}) }}">{{ speciality.title }}</a></h5>
+                                <h5><a href="{{ path('speciality', {'category' : value.title}) }}">{{ value.title }}</a></h5>
                             </div>
                         {% endfor %}
                     {% endif %}
+
 
 
 

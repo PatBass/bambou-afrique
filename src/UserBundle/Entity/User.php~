@@ -2,6 +2,7 @@
 
 namespace UserBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -28,13 +29,19 @@ class User extends BaseUser
     /**
      * @var Address
      *
-     * @ORM\ManyToOne(targetEntity="Address", cascade={"persist", "remove"})
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="refaddress", referencedColumnName="id")
-     * })
-     * @Exclude
+     * @ORM\OneToMany(targetEntity="Address", mappedBy="user", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=true)
+     *
+     *
+     *
      */
-    protected $address;
+    protected $addresses;
+
+    /**
+     * @ORM\OneToMany(targetEntity="MainBundle\Entity\Commande", mappedBy="idutilisateur", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    protected $commandes;
 
     /**
      * @var string
@@ -181,6 +188,8 @@ class User extends BaseUser
     public function __construct()
     {
         parent::__construct();
+        $this->commandes = new ArrayCollection();
+        $this->addresses = new ArrayCollection();
     }
 
     /**
@@ -250,5 +259,336 @@ class User extends BaseUser
     {
         return $this->debug;
     }
-}
 
+    /**
+     * Set maidenname
+     *
+     * @param string $maidenname
+     *
+     * @return User
+     */
+    public function setMaidenname($maidenname)
+    {
+        $this->maidenname = $maidenname;
+
+        return $this;
+    }
+
+    /**
+     * Get maidenname
+     *
+     * @return string
+     */
+    public function getMaidenname()
+    {
+        return $this->maidenname;
+    }
+
+    /**
+     * Set gender
+     *
+     * @param string $gender
+     *
+     * @return User
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+
+        return $this;
+    }
+
+    /**
+     * Get gender
+     *
+     * @return string
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * Set firstname
+     *
+     * @param string $firstname
+     *
+     * @return User
+     */
+    public function setFirstname($firstname)
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    /**
+     * Get firstname
+     *
+     * @return string
+     */
+    public function getFirstname()
+    {
+        return $this->firstname;
+    }
+
+    /**
+     * Set lastname
+     *
+     * @param string $lastname
+     *
+     * @return User
+     */
+    public function setLastname($lastname)
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    /**
+     * Get lastname
+     *
+     * @return string
+     */
+    public function getLastname()
+    {
+        return $this->lastname;
+    }
+
+    /**
+     * Set birthday
+     *
+     * @param \DateTime $birthday
+     *
+     * @return User
+     */
+    public function setBirthday($birthday)
+    {
+        $this->birthday = $birthday;
+
+        return $this;
+    }
+
+    /**
+     * Get birthday
+     *
+     * @return \DateTime
+     */
+    public function getBirthday()
+    {
+        return $this->birthday;
+    }
+
+    /**
+     * Set birthcity
+     *
+     * @param string $birthcity
+     *
+     * @return User
+     */
+    public function setBirthcity($birthcity)
+    {
+        $this->birthcity = $birthcity;
+
+        return $this;
+    }
+
+    /**
+     * Get birthcity
+     *
+     * @return string
+     */
+    public function getBirthcity()
+    {
+        return $this->birthcity;
+    }
+
+    /**
+     * Set birthzipcode
+     *
+     * @param string $birthzipcode
+     *
+     * @return User
+     */
+    public function setBirthzipcode($birthzipcode)
+    {
+        $this->birthzipcode = $birthzipcode;
+
+        return $this;
+    }
+
+    /**
+     * Get birthzipcode
+     *
+     * @return string
+     */
+    public function getBirthzipcode()
+    {
+        return $this->birthzipcode;
+    }
+
+    /**
+     * Set birthcountry
+     *
+     * @param string $birthcountry
+     *
+     * @return User
+     */
+    public function setBirthcountry($birthcountry)
+    {
+        $this->birthcountry = $birthcountry;
+
+        return $this;
+    }
+
+    /**
+     * Get birthcountry
+     *
+     * @return string
+     */
+    public function getBirthcountry()
+    {
+        return $this->birthcountry;
+    }
+
+    /**
+     * Set nationality
+     *
+     * @param string $nationality
+     *
+     * @return User
+     */
+    public function setNationality($nationality)
+    {
+        $this->nationality = $nationality;
+
+        return $this;
+    }
+
+    /**
+     * Get nationality
+     *
+     * @return string
+     */
+    public function getNationality()
+    {
+        return $this->nationality;
+    }
+
+    /**
+     * Set phone
+     *
+     * @param string $phone
+     *
+     * @return User
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return string
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * Set address
+     *
+     * @param \UserBundle\Entity\Address $address
+     *
+     * @return User
+     */
+    public function setAddress(\UserBundle\Entity\Address $address = null)
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    /**
+     * Get address
+     *
+     * @return \UserBundle\Entity\Address
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * Add commande
+     *
+     * @param \MainBundle\Entity\Commande $commande
+     *
+     * @return User
+     */
+    public function addCommande(\MainBundle\Entity\Commande $commande)
+    {
+        $this->commandes[] = $commande;
+
+        return $this;
+    }
+
+    /**
+     * Remove commande
+     *
+     * @param \MainBundle\Entity\Commande $commande
+     */
+    public function removeCommande(\MainBundle\Entity\Commande $commande)
+    {
+        $this->commandes->removeElement($commande);
+    }
+
+    /**
+     * Get commandes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCommandes()
+    {
+        return $this->commandes;
+    }
+
+    /**
+     * Add address
+     *
+     * @param \UserBundle\Entity\Address $address
+     *
+     * @return User
+     */
+    public function addAddress(\UserBundle\Entity\Address $address)
+    {
+        $this->addresses[] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Remove address
+     *
+     * @param \UserBundle\Entity\Address $address
+     */
+    public function removeAddress(\UserBundle\Entity\Address $address)
+    {
+        $this->addresses->removeElement($address);
+    }
+
+    /**
+     * Get addresses
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAddresses()
+    {
+        return $this->addresses;
+    }
+}

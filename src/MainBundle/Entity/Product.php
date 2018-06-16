@@ -4,10 +4,12 @@ namespace MainBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * Product
- *
+ * @Vich\Uploadable
  * @ORM\Table(name="product")
  * @ORM\Entity(repositoryClass="MainBundle\Repository\ProductRepository")
  */
@@ -48,10 +50,12 @@ class Product
      *
      * @ORM\Column(name="available", type="boolean")
      */
-    private $available;
+    private $available = true;
 
     /**
      * @ORM\Column(name="updated_at", type="datetime", nullable=true)
+     *
+     * @var \DateTime
      */
     private $updatedAt;
 
@@ -69,11 +73,24 @@ class Product
     private $image;
 
     /**
+     * @Vich\UploadableField(mapping="product_images", fileNameProperty="productName")
+     * @var File
+     */
+    private $productFile;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @var string
+     */
+    private $productName;
+
+    /**
      * @var float
      *
-     * @ORM\Column(name="vat", type="float", nullable=true)
+     * @ORM\ManyToOne(targetEntity="MainBundle\Entity\Tva", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=true)
      */
-    private $vat;
+    private $tva;
 
     /**
      * @var \DateTime
@@ -403,4 +420,71 @@ class Product
     {
         return $this->image;
     }
+
+    /**
+     * Set tva
+     *
+     * @param \MainBundle\Entity\Tva $tva
+     *
+     * @return Product
+     */
+    public function setTva(\MainBundle\Entity\Tva $tva = null)
+    {
+        $this->tva = $tva;
+
+        return $this;
+    }
+
+    /**
+     * Get tva
+     *
+     * @return \MainBundle\Entity\Tva
+     */
+    public function getTva()
+    {
+        return $this->tva;
+    }
+
+    public function setProductFile(File $product = null)
+    {
+        $this->productFile = $product;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($product) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTimeImmutable();
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getProductFile()
+    {
+        return $this->productFile;
+    }
+
+    /**
+     * @param string $productName
+     * @return Product
+     */
+    public function setProductName($productName)
+    {
+        $this->productName = $productName;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getProductName()
+    {
+        return $this->productName;
+    }
+
+
 }

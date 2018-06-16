@@ -2,6 +2,7 @@
 
 namespace UserBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -28,13 +29,19 @@ class User extends BaseUser
     /**
      * @var Address
      *
-     * @ORM\ManyToOne(targetEntity="Address", cascade={"persist", "remove"})
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="refaddress", referencedColumnName="id")
-     * })
-     * @Exclude
+     * @ORM\OneToMany(targetEntity="Address", mappedBy="user", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=true)
+     *
+     *
+     *
      */
-    protected $address;
+    protected $addresses;
+
+    /**
+     * @ORM\OneToMany(targetEntity="MainBundle\Entity\Commande", mappedBy="idutilisateur", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    protected $commandes;
 
     /**
      * @var string
@@ -181,6 +188,8 @@ class User extends BaseUser
     public function __construct()
     {
         parent::__construct();
+        $this->commandes = new ArrayCollection();
+        $this->addresses = new ArrayCollection();
     }
 
     /**
@@ -513,5 +522,73 @@ class User extends BaseUser
     public function getAddress()
     {
         return $this->address;
+    }
+
+    /**
+     * Add commande
+     *
+     * @param \MainBundle\Entity\Commande $commande
+     *
+     * @return User
+     */
+    public function addCommande(\MainBundle\Entity\Commande $commande)
+    {
+        $this->commandes[] = $commande;
+
+        return $this;
+    }
+
+    /**
+     * Remove commande
+     *
+     * @param \MainBundle\Entity\Commande $commande
+     */
+    public function removeCommande(\MainBundle\Entity\Commande $commande)
+    {
+        $this->commandes->removeElement($commande);
+    }
+
+    /**
+     * Get commandes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCommandes()
+    {
+        return $this->commandes;
+    }
+
+    /**
+     * Add address
+     *
+     * @param \UserBundle\Entity\Address $address
+     *
+     * @return User
+     */
+    public function addAddress(\UserBundle\Entity\Address $address)
+    {
+        $this->addresses[] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Remove address
+     *
+     * @param \UserBundle\Entity\Address $address
+     */
+    public function removeAddress(\UserBundle\Entity\Address $address)
+    {
+        $this->addresses->removeElement($address);
+    }
+
+    /**
+     * Get addresses
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAddresses()
+    {
+        return $this->addresses;
     }
 }

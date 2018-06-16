@@ -2241,6 +2241,24 @@ ul.social-icons li.linked a span{
     text-indent: 100%;
     background: url('../images/up.png') no-repeat 0px 0px;
 }
+
+li > a > .cart, li > a > .badge-pill {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.badge-pill, .badge {
+    color: red;
+}
+
+.contact {
+    color: white;
+}
+
+
+
+
+
 /*--responsive media quries--*/
 @media(max-width:1440px){
 }

@@ -12,4 +12,9 @@ bambou_user:
     resource: "@UserBundle/Resources/config/routing.yml"
     prefix:   /
 
+easy_admin_bundle:
+    resource: "@EasyAdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /admin
+
 

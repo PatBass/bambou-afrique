@@ -1,0 +1,5 @@
+<form action="{{ path('search_product') }}" method="POST">
+    {{ form_widget(form.search, {'attr':{'placeholder':'Rechercher un mets ici...'}}) }}
+    <input type="submit" value="">
+    {{ form_widget(form) }}
+</form>

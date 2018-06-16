@@ -1,0 +1,80 @@
+{% extends "::Layout/layout.html.twig" %}
+{% block title %}{{ parent() }} - Casablanca{% endblock %}
+{% block body %}
+    {% include('MainBundle:Common:header.html.twig') with {active: 'speciality'} %}
+    <!--========================================================
+                           CONTENT
+ =========================================================-->
+
+    {#{% include('MainBundle:Common:banner.html.twig') %}#}
+    <div class="container" style="padding-top: 100px;">
+        <div class="specials">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Livraison</h2>
+                    <div class="accordion collapse in">
+                        <div class="collapse-inner">
+                            <div class="col-sm-4">
+                                {% if currentUser | length != 0 %}
+                                    <form action="{{ path('validation') }}" method="POST">
+                                        <h4>Adresse de livraison</h4>
+                                        {% for address in currentUser.addresses %}
+                                        <label class="radio">
+                                            <input type="radio" name="shipping" value="{{ address.id }}" {% if loop.index0 == 0 %} checked="checked"{% endif %} />
+                                            {{ address.streetnumber }} {% if address.streetextension is defined and address.streetextension is not null %}{{ address.streetextension }}{% endif %} {{ address.streettype }} {{ address.streetname }}, {{ address.zipcode }} {{ address.city }} - {{ address.country }}<a href="{{ path('deleteAddress', {'id':address.id}) }}"><i class="glyphicon glyphicon-trash"></i></a>
+                                        </label>
+                                        {% endfor %}
+
+
+                                        <br><br>
+
+
+                                        <h4>Adresse de facturation</h4>
+                                        {% for address in currentUser.addresses %}
+                                        <label class="radio">
+                                            <input type="radio" name="billing" value="{{ address.id }}" {% if loop.index0 == 0 %} checked="checked"{% endif %} />
+                                            {{ address.streetnumber }} {% if address.streetextension is defined and address.streetextension is not null %}{{ address.streetextension }}{% endif %} {{ address.streettype }} {{ address.streetname }}, {{ address.zipcode }} {{ address.city }} - {{ address.country }}<a href="{{ path('deleteAddress', {'id':address.id}) }}"><i class="glyphicon glyphicon-trash"></i></a>
+                                        </label>
+                                        {% endfor %}
+
+                                        <button class="btn btn-primary">Valider mes adresses</button>
+                                    </form>
+                                {% endif %}
+                            </div>
+
+                            <div class="col-sm-4">
+                                <h4>Ajouter une autre adresse</h4>
+                                <form action="{{ path('shipping') }}" method="POST">
+                                    {{ form_widget(form) }}
+                                    <button class="btn btn-primary">Ajouter</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="special-bottom">
+                <div class="col-md-6 bottom-special">
+                    <h5><a href="single.html">ALIQUAM CONGUE FERMENTU</a></h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                    <a href="single.html" class="details">Details</a>
+                </div>
+                <div class="col-md-6 bottom-special-1">
+                    <h5><a href="single.html">ALIQUAM CONGUE FERMENTU</a></h5>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                    <a href="single.html" class="details">Details</a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    {% include('MainBundle:Common:footer.html.twig') %}
+{% endblock %}

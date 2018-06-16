@@ -48,7 +48,7 @@ class Product
      *
      * @ORM\Column(name="available", type="boolean")
      */
-    private $available;
+    private $available =1;
 
     /**
      * @ORM\Column(name="updated_at", type="datetime", nullable=true)
@@ -71,9 +71,10 @@ class Product
     /**
      * @var float
      *
-     * @ORM\Column(name="vat", type="float", nullable=true)
+     * @ORM\ManyToOne(targetEntity="MainBundle\Entity\Tva", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=true)
      */
-    private $vat;
+    private $tva;
 
     /**
      * @var \DateTime

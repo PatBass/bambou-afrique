@@ -52,6 +52,20 @@ class Address
     /**
      * @var string
      *
+     * @ORM\Column(name="firstname", type="string", length=60, nullable=true)
+     */
+    private $firstname;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lastname", type="string", length=60, nullable=true)
+     */
+    private $lastname;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="zipcode", type="string", length=5, nullable=true)
      */
     private $zipcode;
@@ -69,6 +83,17 @@ class Address
      * @ORM\Column(name="country", type="string", length=30, nullable=true)
      */
     private $country;
+
+    /**
+     * @var Use
+     *
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="addresses", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     *
+     *
+     *
+     */
+    protected $user;
 
     /**
      * Get full address
@@ -257,5 +282,77 @@ class Address
     public function getStreettype()
     {
         return $this->streettype;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \UserBundle\Entity\User $user
+     *
+     * @return Address
+     */
+    public function setUser(\UserBundle\Entity\User $user)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set firstname
+     *
+     * @param string $firstname
+     *
+     * @return Address
+     */
+    public function setFirstname($firstname)
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    /**
+     * Get firstname
+     *
+     * @return string
+     */
+    public function getFirstname()
+    {
+        return $this->firstname;
+    }
+
+    /**
+     * Set lastname
+     *
+     * @param string $lastname
+     *
+     * @return Address
+     */
+    public function setLastname($lastname)
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    /**
+     * Get lastname
+     *
+     * @return string
+     */
+    public function getLastname()
+    {
+        return $this->lastname;
     }
 }

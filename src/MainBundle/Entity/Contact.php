@@ -32,7 +32,7 @@ class Contact
      * @Assert\NotBlank()
      * @ORM\Column(name="phone", type="string", length=40, nullable=false)
      */
-    private $phone;
+    private $phone = '1111111111';
 
     /**
      * @var string

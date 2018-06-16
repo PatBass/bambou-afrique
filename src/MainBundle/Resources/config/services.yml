@@ -21,3 +21,23 @@ services:
 
     bambou.calendar:
         class: MainBundle\Services\Calendar
+
+    tva:
+        class: MainBundle\Twig\Extension\TvaExtension
+        tags:
+            - { name: twig.extension}
+
+    montant_tva:
+        class: MainBundle\Twig\Extension\MontantTvaExtension
+        tags:
+            - { name: twig.extension}
+
+    redirection_listener:
+        class: MainBundle\Services\RedirectionListener
+        arguments: [@service_container, @session]
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest}
+
+    set_new_reference:
+        class: MainBundle\Services\GetReference
+        arguments: [@security.context, @doctrine.orm.entity_manager]

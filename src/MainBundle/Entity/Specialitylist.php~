@@ -70,5 +70,28 @@ class Specialitylist
         return $this->title;
     }
 
-}
 
+    /**
+     * Set image
+     *
+     * @param \MainBundle\Entity\Image $image
+     *
+     * @return Specialitylist
+     */
+    public function setImage(\MainBundle\Entity\Image $image = null)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return \MainBundle\Entity\Image
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+}

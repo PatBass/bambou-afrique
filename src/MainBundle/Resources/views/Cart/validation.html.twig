@@ -1,0 +1,84 @@
+{% extends "::Layout/layout.html.twig" %}
+{% block title %}{{ parent() }} - Casablanca - Panier{% endblock %}
+
+{% block body %}
+    {% include('MainBundle:Common:header.html.twig') with {active: ''}%}
+    <!--========================================================
+                           CONTENT
+    =========================================================-->
+
+    {#{% include('MainBundle:Common:banner.html.twig') %}#}
+
+    <div class="container" style="padding-top: 100px;">
+        <div class="content-grid row">
+            <div class="col-sm-3">
+
+            </div>
+            <div class="col-sm-9">
+                <h2>Validation du panier</h2>
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>Désignation</th>
+                        <th>Quantité</th>
+                        <th>Prix unitaire</th>
+                        <th>Total HT</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for product in commande.commande.products %}
+                        <tr>
+                            <td>{{ product.title }}</td>
+                            <td>
+                                {{ product.quantity }}
+                            </td>
+                            <td>{{ product.prixHT | number_format(2,',','.')  }} Dhs</td>
+                            <td>{{ (product.prixHT * product.quantity) | number_format(2,',','.') }} Dhs</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <dl class="dl-horizontal pull-right">
+                    <dt>Total HT :</dt>
+                    <dd>{{ comande.commande.prixHT | number_format(2,',','.') }} Dhs</dd>
+                    {% for key, tva in comande.commande.tva %}
+                        <dt>TVA{{ key | number_format(2,',','.') }} : </dt>
+                        <dd>{{ tva | number_format(2,',','.') }} Dhs</dd>
+                    {% endfor %}
+                    <dt>Total TTC :</dt>
+                    <dd>{{ comande.commande.prixTTC | number_format(2,',','.') }} Dhs</dd>
+                </dl>
+
+                <div class="col-sm-3 pull-left">
+                    <dl class="pull-left">
+                        <dt><h4>Adresse de livraison</h4></dt>
+                        <dt>{{ comande.commande.shipping.firstname }} {{ address.lastname }}</dt>
+                        <dt>{{ comande.commande.shipping.streetnumber }} {{ comande.commande.shipping.streetextension }} {{ comande.commande.shipping.streettype }} {{ comande.commande.shipping.streetname }}, {{ comande.commande.shipping.zipcode }} {{ comande.commande.shipping.city }} - {{ comande.commande.shipping.country }}</dt>
+                    </dl>
+                </div>
+
+                <div class="col-sm-3 pull-left">
+                    <dl class="pull-left">
+                        <dt><h4>Adresse de facturation</h4></dt>
+                        <dt>{{ comande.commande.biling.firstname }} {{ address.lastname }}</dt>
+                        <dt>{{ comande.commande.biling.streetnumber }} {{ comande.commande.biling.streetextension }} {{ comande.commande.biling.streettype }} {{ comande.commande.biling.streetname }}, {{ comande.commande.biling.zipcode }} {{ comande.commande.biling.city }} - {{ comande.commande.biling.country }}</dt>
+                    </dl>
+                </div>
+
+                <div class="clearfix"></div>
+
+                {# Les données à envoyées à l'api - à modifier en fonction de l'api #}
+                <form action="{{ path('validation_commande') }}" method="POST">
+                    <input name="token" type="hidden" value="{{ commande.commande.token }}" />
+                    <input name="date" type="hidden" value="{{ commande.date | date('dmyhms')}}" />
+                    <input name="prix" type="hidden" value="{{ commande.commande.prixTTC }}" />
+                    <button type="submit" class="btn btn-success pull-right">Payer</button>
+                </form>
+
+                <a href="{{ path('shipping') }}" class="btn btn-primary ">Retour</a>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

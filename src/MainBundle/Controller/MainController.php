@@ -6,6 +6,7 @@ use MainBundle\Entity\Application;
 use MainBundle\Entity\Contact;
 use MainBundle\Form\ApplicationType;
 use MainBundle\Form\ContactType;
+use MainBundle\Form\SearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -76,24 +77,75 @@ class MainController extends Controller
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
+     *
+     *
+     */
+    public function searchAction()
+    {
+        $form = $this->createForm(new SearchType());
+
+        return $this->render('MainBundle:Search:search.html.twig', array(
+                'form' => $form->createView()
+            )
+        );
+
+    }
+
+    /**
+     *
+     * @Route ("/Bamboudafrique-Casablanca/recherche", name="search_product")
+     *
+     */
+    public function processSearchAction()
+    {
+
+        //Simple test to make sure the value in the search field is retrieved
+        /*$form = $this->createForm(new SearchType());
+        if ($this->get('request')->getMethod() == 'POST') {
+            $form->bind($this->get('request'));
+            echo $form['search']->getData();
+        }
+
+        die();*/
+
+        $form = $this->createForm(new SearchType());
+
+        if ($this->get('request')->getMethod() == 'POST') {
+            $form->bind($this->get('request'));
+            $em = $this->getDoctrine()->getManager();
+            $productsList = $em->getRepository('MainBundle:Product')->searchProduct($form['search']->getData());
+            $specialityList = $em->getRepository('MainBundle:Specialitylist')->findAll();
+        } else {
+            throw $this->createNotFoundException('La page demandée n\'existe pas');
+        }
+
+
+        return $this->render('MainBundle:Main:africaine.html.twig', array(
+                'productsList' => $productsList,
+                'specialityList' => $specialityList
+            )
+        );
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
      * @Route ("/Bamboudafrique-Casablanca/Specialite/{category}", name="speciality")
      *
      */
-    public function specialityAction(Request $request, $category)
+    public function specialityAction(Request $request, $category = null)
     {
+
         $category = strtolower($category);
         $em = $this->getDoctrine()->getManager();
-        $productsList = $em->getRepository('MainBundle:Product')->findAll();
+        $productsList = $em->getRepository('MainBundle:Product')->findBy(array('available' => 1));
         $listCategories = $em->getRepository('MainBundle:Category')->findAll();
         $specialityList = $em->getRepository('MainBundle:Specialitylist')->findAll();
 
 
-        $finalProductsList = [];
         if ($category != "liste") {
             foreach ($productsList as $product ) {
 
                 foreach ($listCategories as $cat) {
-                    //var_dump($category);die();
                     if ($cat->getName() === $category) {
                         $product->addCategory($cat);
                         $finalProductsList[] = $product;
@@ -102,15 +154,8 @@ class MainController extends Controller
             }
         }
 
-        $categ = ($category != "liste")? '$category':'';
-
-        //var_dump($finalProductsList);die();
-
-
         return $this->render('MainBundle:Main:'.$category.'.html.twig', array(
-            'finalProductsList' => $finalProductsList,
             'productsList'      => $productsList,
-            'categ'             => $categ,
             'specialityList'    => $specialityList
         ));
 
@@ -123,22 +168,15 @@ class MainController extends Controller
      */
     public function contactAction(Request $request)
     {
-        // Retrieving POST data
-        //$postData = $request->request->get('email');
 
         $contact = new Contact();
-
-        //$form = $this->createForm(new ContactType(), $contact);
 
         $form = $this
             ->createForm(new ContactType(), $contact)
             ->handleRequest($request)
         ;
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            /*if ($this->get('ap_platform.antispam')->isSpam($contact->getMessage())) {
-                throw new \Exception('The field email is either empty or its content is too short');
-            }*/
+        if ($this->getRequest()->getMethod() == "POST" ) {
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($contact);
@@ -149,13 +187,18 @@ class MainController extends Controller
             $mailer = $this->get('mailer');
 
             $message =  \Swift_Message::newInstance()
-                ->setSubject('Message venant du formulaire de contact de odellya.org')
-                ->setFrom('contact@odellya.org')
-                ->setTo('contact@odellya.org')
-                ->setBody("Nouveau message provenant de ".$contact->getName()."<br>  Adresse Email : <strong>".$contact->getEmail()."</strong> <br>Son message:<br> <i>".$contact->getMessage()."</i>")
+                ->setSubject('Message venant du formulaire de contact de bamboudafrique.com')
+                ->setFrom('contact@bamboudafrique.com')
+                ->setTo('patrickbassoukissa@gmail.com')
+                ->setBody("Bonjour,"."\n\n"."Un nouveau message vient d'être posté via le formulaire de contact "."\n\n"."Voici les informations recueillies :"."\n\n"."Nom : ".$contact->getName()."\n"."  Adresse e-mail : ".$contact->getEmail()."\n"." Message :"."\n".$contact->getMessage())
             ;
 
             $mailer->send($message);
+
+            unset($contact);
+            unset($form);
+            $contact = new Contact();
+            $form = $this->createForm(new ContactType(), $contact);
         }
 
         return $this->render("MainBundle:Main:contact.html.twig", array(
@@ -324,61 +367,6 @@ class MainController extends Controller
         return new RedirectResponse($url);
     }
 
-    /**
-     * @return \Symfony\Component\HttpFoundation\Response|void
-     * @Route ("/keyword-search", name="keyword_search")
-     */
-    public function searchAction()
-    {
-        $request = $this->container->get('request');
-
-        $search_application = $this->get('fos_elastica.index.odellya.application');
-        $search_application->search('prenom1@domain.com');
-
-
-        /*if($request->isXmlHttpRequest())
-        {
-            $keyword = '';
-            $keyword = $request->request->get('keyword');
-
-            $em = $this->container->get('doctrine')->getEntityManager();
-
-            if($keyword != '')
-            {
-                $qb = $em->createQueryBuilder();
-
-                $qb->select('a')
-                    ->from('MyAppFilmothequeBundle:Acteur', 'a')
-                    ->where("a.nom LIKE :keyword OR a.prenom LIKE :keyword")
-                    ->orderBy('a.nom', 'ASC')
-                    ->setParameter('keyword', '%'.$keyword.'%');
-
-                $query = $qb->getQuery();
-                $acteurs = $query->getResult();
-            }
-            else {
-                $acteurs = $em->getRepository('MyAppFilmothequeBundle:Acteur')->findAll();
-            }
-
-            return $this->container->get('templating')->renderResponse('MyAppFilmothequeBundle:Acteur:liste.html.twig', array(
-                'acteurs' => $acteurs
-            ));
-        }
-        else {
-            return $this->listerAction();
-        }*/
-    }
-
-    public function listerAction() // Pour ajouter le formulaire
-    {
-        // ...
-        $form = $this->container->get('form.factory')->create(new ActeurRechercheForm());
-
-        return $this->container->get('templating')->renderResponse('MyAppFilmothequeBundle:Acteur:lister.html.twig', array(
-            'acteurs' => $acteurs,
-            'form' => $form->createView()
-        ));
-    }
 
     /**
      * @Route ("/translation/{name}", name="translation")

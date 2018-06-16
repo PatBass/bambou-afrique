@@ -9,6 +9,8 @@ imports:
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
+    app.path.product_images: /images/
+    app.path.specialitylist_images: /images/specialitylist/
 
 framework:
     #esi:             ~
@@ -112,13 +114,7 @@ fos_elastica:
                         driver: orm # orm, mongodb, propel are available
                         model:  MainBundle\Entity\Application
                         provider: ~
-                Contact:
-                    mappings: ~
-                    persistence:
-                        driver: orm
-                        model:  MainBundle\Entity\Contact
-                        provider: ~
-                        listener: ~
+                
 
 
 # FOSUserBundle Configuration
@@ -142,3 +138,87 @@ fos_user:
             from_email:
                 address: contact@bamboudafrique.com
                 sender_name: "Restaurant Bambou d Afrique"
+
+easy_admin:
+    entities:
+        # Entities to be handled in the admin panel
+        Product:
+            class: MainBundle\Entity\Product
+            list:
+                title: "Plats"
+                fields:
+                    - "title"
+                    - "price"
+                    - "tva"
+                    - "available"
+                    - "productName"
+
+            show:
+                fields:
+                    - "title"
+                    - "price"
+                    - "available"
+                    - "productName"
+                    - { property: 'productFile', type: 'vich_image', base_path: '/images/' }
+            form:
+                fields:
+                    - "title"
+                    - "price"
+                    - "available"
+                    - "description"
+                    - "productName"
+                    - { property: 'productFile', type: 'vich_image', label: 'Fichier image', base_path: '/images/'  }
+
+        Commande:
+            class: MainBundle\Entity\Commande
+            list:
+                title: "Commandes récentes"
+
+        User:
+            list:
+                title: "Liste de membres"
+            class: UserBundle\Entity\User
+
+        Tva:
+            class: MainBundle\Entity\Tva
+            list:
+                fields:
+                - "valeur"
+                - "name"
+            form:
+                fields:
+                    - "name"
+                    - "valeur"
+
+        Specialitylist:
+            list:
+                title: "Liste de spécialités"
+                fields:
+                    - "title"
+                    - "specialitylistName"
+            show:
+                fields:
+                    - "title"
+                    - { property: 'specialitylistFile', type: 'vich_image', base_path: %app.path.specialitylist_images% }
+            form:
+                fields:
+                    - "title"
+                    - { property: 'specialitylistFile', type: 'vich_image', label: 'Fichier image', base_path: %app.path.specialitylist_images%  }
+            class: MainBundle\Entity\Specialitylist
+
+    site_name: "Admin Bambou d'Afrique"
+    design:
+        brand_color: '#CC4324'
+        menu: [{ entity: 'Product', label: 'Plats' }, { entity: 'User', label: 'Utilisateurs' }, 'Commande', 'Tva', { entity: 'Specialitylist', label: 'Spécialités' }]
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        product_images:
+            uri_prefix:         '%app.path.product_images%'
+            upload_destination: '%kernel.root_dir%/../web%app.path.product_images%'
+            namer: vich_uploader.namer_origname
+        specialitylist_images:
+            uri_prefix:         '%app.path.specialitylist_images%'
+            upload_destination: '%kernel.root_dir%/../web%app.path.specialitylist_images%'
+            namer: vich_uploader.namer_origname
