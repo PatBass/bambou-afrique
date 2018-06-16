@@ -1,0 +1,144 @@
+<?php
+
+namespace MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
+
+/**
+ * AccueilCasa
+ *
+ * @Vich\Uploadable
+ * @ORM\Table(name="accueil_casa")
+ * @ORM\Entity(repositoryClass="MainBundle\Repository\AccueilCasaRepository")
+ */
+class AccueilCasa
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomCasaImage", type="string", length=255)
+     */
+    private $nomCasaImage;
+
+    /**
+     * @Vich\UploadableField(mapping="product_images", fileNameProperty="nomCasaImage")
+     * @var File
+     */
+    private $fichierCasaAccueil;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updatedAt", type="datetime", nullable=true)
+     */
+    private $updatedAt;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="texte", type="text", nullable=true)
+     */
+    private $texte;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="string", length=255)
+     */
+    private $titre;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nomCasaImage
+     *
+     * @param string $nomCasaImage
+     *
+     * @return AccueilCasa
+     */
+    public function setNomCasaImage($nomCasaImage)
+    {
+        $this->nomCasaImage = $nomCasaImage;
+
+        return $this;
+    }
+
+    /**
+     * Get nomCasaImage
+     *
+     * @return string
+     */
+    public function getNomCasaImage()
+    {
+        return $this->nomCasaImage;
+    }
+
+    /**
+     * Set fichierCasaAccueil
+     *
+     * @param string $fichierCasaAccueil
+     *
+     * @return AccueilCasa
+     */
+    public function setFichierCasaAccueil($fichierCasaAccueil)
+    {
+        $this->fichierCasaAccueil = $fichierCasaAccueil;
+
+        return $this;
+    }
+
+    /**
+     * Get fichierCasaAccueil
+     *
+     * @return string
+     */
+    public function getFichierCasaAccueil()
+    {
+        return $this->fichierCasaAccueil;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     *
+     * @return AccueilCasa
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+}
+

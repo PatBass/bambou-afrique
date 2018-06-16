@@ -1,0 +1,107 @@
+<?php
+
+namespace MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
+
+/**
+ * ImageMur
+ *
+ * @Vich\Uploadable
+ * @ORM\Table(name="image_mur")
+ * @ORM\Entity(repositoryClass="MainBundle\Repository\ImageMurRepository")
+ */
+class ImageMur
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomImageMur", type="string", length=255)
+     */
+    private $nomImageMur;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="fichierImageMur", type="string", length=255)
+     */
+    private $fichierImageMur;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updatedAt", type="datetime", nullable=true)
+     */
+    private $updatedAt;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nomImageMur
+     *
+     * @param string $nomImageMur
+     *
+     * @return ImageMur
+     */
+    public function setNomImageMur($nomImageMur)
+    {
+        $this->nomImageMur = $nomImageMur;
+
+        return $this;
+    }
+
+    /**
+     * Get nomImageMur
+     *
+     * @return string
+     */
+    public function getNomImageMur()
+    {
+        return $this->nomImageMur;
+    }
+
+    /**
+     * Set fichierImageMur
+     *
+     * @param string $fichierImageMur
+     *
+     * @return ImageMur
+     */
+    public function setFichierImageMur($fichierImageMur)
+    {
+        $this->fichierImageMur = $fichierImageMur;
+
+        return $this;
+    }
+
+    /**
+     * Get fichierImageMur
+     *
+     * @return string
+     */
+    public function getFichierImageMur()
+    {
+        return $this->fichierImageMur;
+    }
+}
+

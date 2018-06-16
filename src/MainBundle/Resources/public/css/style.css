@@ -1459,7 +1459,7 @@ ul.number li i.mail{
     -ms-border-radius: 14px;
     background:#fff;
     padding: 1.5em;
-    margin-right: 5%;
+    margin-right: 2%;
     width: 30%;
     float:left;
     margin-bottom: 2em;
@@ -1651,11 +1651,9 @@ a.more{
     padding-bottom: 0.5em;
 }
 .bottom-special{
-    /*background:url(../images/gal29.jpg) no-repeat center;*/
     display:block;
     padding: 6em 2em;
     text-align:center;
-    margin-right: 3%;
     width: 48.5%;
     background-size: cover;
 }
@@ -1757,7 +1755,7 @@ a.more{
     color:#aa381e;
     padding: 0.5em 0;
 }
-.single-men p{
+.single-men > p{
     font-size:1.3em;
     color:#848484;
     line-height:1.5em;
@@ -2256,7 +2254,32 @@ li > a > .cart, li > a > .badge-pill {
 }
 
 
+.single-men img {
+    border: 9px solid rgba(211,211,211,0.2);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
 
+
+/****** Speciality page *******/
+
+.speciality-img > a > img{
+    border: 9px solid rgba(211,211,211,0.2);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.speciality-img > h5 > a {
+    font-family: 'Lobster Two', cursive;
+    font-size: 1.5em;
+    color: white;
+}
+
+.speciality-img {
+    margin-bottom: 40px;
+}
 
 
 /*--responsive media quries--*/
@@ -2569,10 +2592,7 @@ li > a > .cart, li > a > .badge-pill {
     .specials {
         padding: 1em 0 3em;
     }
-    .single-men p {
-        height: 100px;
-        overflow: hidden;
-    }
+
     ul.comment-list img {
         width: 18%;
     }

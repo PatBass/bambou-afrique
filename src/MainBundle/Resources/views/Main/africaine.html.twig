@@ -45,23 +45,25 @@
             <div class="cup">
                 {% if productsList is not empty %}
                     {% for key, product in productsList %}
-                        <ul>
-                            <li>
-                                <div class="col-md-6 cup-in">
+                        {% if loop.index <= 12 %}
+                            <div class="col-md-6 cup-in">
+                                <a href="{{ path('single', {'id': product.id}) }}" >
                                     <img src="{{ asset('images/'~product.productName) }}" class="img-responsive" alt="">
-                                    <p>{{ product.title }}</p>
-                                    <span class="dollar">{{ product.price }} dh</span>
-                                    <div class="details-in">
-                                        <a href="{{ path('single', {'id': product.id}) }}" class="details">Détails</a>
-                                    </div>
+                                </a>
+                                <p>{{ product.title }}</p>
+                                <span class="dollar">{{ product.price }} dh</span>
+                                <div class="details-in">
+                                    <a href="{{ path('single', {'id': product.id}) }}" class="details">Détails</a>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        {% endif %}
 
                     {% endfor %}
                 {% endif %}
             </div>
             <!---->
+            {#
+
             <div class="browse">
                 <p class="vit">Mollis vitae oigu edlobit <span>vulipur felis ...</span></p>
                 <a href="" class="more">Voir plus</a>
@@ -70,39 +72,43 @@
                     <a href="#"><img src="{{ asset('bundles/main/images/arrow.png') }}" alt=""></a>
                 </div>
             </div>
+
+            #}
+
             <!---->
-            <div class="content-sit">
-                <div class="col-md-6 amet">
-                    <h3>Astuce du jour</h3>
-                    <p>tortillas </p>
-                    <div class="egg">
-                        <a href=""><img src="{{ asset('bundles/main/images/pic.jpg') }}" class="img-responsive" alt=""></a>
-                    </div>
-                    <p class="para-in">Rem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incidi. </p>
-                </div>
-                <div class="col-md-6 amet-in">
-                    <h3>Evénements</h3>
-                    <p>Dates à entregister </p>
-                    <div class="amet-grid">
-                        <div class="now"><span>Nov</span>2017</div>
-                        <p class="sed"><span>Lorem ipsum dolor sit amet </span> <span>consecteturLorem ipsum dolor sit</span> <span>amet, consectetur adipisicing</span></p>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="amet-grid">
-                        <div class="now"><span>Dec</span>2017</div>
-                        <p class="sed"><span>Lorem ipsum dolor sit amet </span> <span>consecteturLorem ipsum dolor sit</span> <span>amet, consectetur adipisicing</span></p>
-                        <div class="clearfix"> </div>
-                    </div>
-                    <div class="amet-grid">
-                        <div class="now"><span>Oct</span>2017</div>
-                        <p class="sed"><span>Lorem ipsum dolor sit amet </span> <span>consecteturLorem ipsum dolor sit</span> <span>amet, consectetur adipisicing</span></p>
-                        <div class="clearfix"> </div>
-                    </div>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
+
         </div>
         <div class="clearfix"> </div>
+        <div class="row">
+            <div class="col-md-6 amet">
+                <h3>Astuce du jour</h3>
+                <p>tortillas </p>
+                <div class="egg">
+                    <a href=""><img src="{{ asset('bundles/main/images/pic.jpg') }}" class="img-responsive" alt=""></a>
+                </div>
+                <p class="para-in">Rem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incidi. </p>
+            </div>
+            <div class="col-md-6 amet-in">
+                <h3>Evénements</h3>
+                <p>Dates à entregister </p>
+                <div class="amet-grid">
+                    <div class="now"><span>Nov</span>2017</div>
+                    <p class="sed"><span>Lorem ipsum dolor sit amet </span> <span>consecteturLorem ipsum dolor sit</span> <span>amet, consectetur adipisicing</span></p>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="amet-grid">
+                    <div class="now"><span>Dec</span>2017</div>
+                    <p class="sed"><span>Lorem ipsum dolor sit amet </span> <span>consecteturLorem ipsum dolor sit</span> <span>amet, consectetur adipisicing</span></p>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="amet-grid">
+                    <div class="now"><span>Oct</span>2017</div>
+                    <p class="sed"><span>Lorem ipsum dolor sit amet </span> <span>consecteturLorem ipsum dolor sit</span> <span>amet, consectetur adipisicing</span></p>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
     </div>
 
     <!---->

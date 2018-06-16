@@ -34,14 +34,19 @@ class MainController extends Controller
      */
     public function index1Action()
     {
+        $em = $this->getDoctrine()->getManager();
+
         $productsList = $this
             ->getDoctrine()
             ->getRepository('MainBundle:Product')
             ->findAll()
         ;
 
+        $specialityList = $em->getRepository('MainBundle:Specialitylist')->findAll();
+
         return $this->render('MainBundle:Main:index-1.html.twig', array(
-            'productsList' => $productsList
+            'productsList' => $productsList,
+            'specialityList' => $specialityList
         ));
 
     }
@@ -176,7 +181,7 @@ class MainController extends Controller
             ->handleRequest($request)
         ;
 
-        if ($this->getRequest()->getMethod() == "POST" ) {
+        if ($this->getRequest()->getMethod() == "POST" && $form->isSubmitted()) {
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($contact);

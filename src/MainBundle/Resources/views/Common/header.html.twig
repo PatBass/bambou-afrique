@@ -13,6 +13,7 @@
                     <ul class="header-grid">
                         <!--<li ><a href="{{ path('account') }}">Mon Compte   </a> <label>/</label></li>-->
                         {% if app.user %}
+                            <li ><a href="{{ path('fos_user_security_logout') }}">  Se déconnecter </a><label>/</label> </li>
                             <li class="green-bold">Bonjour {{ app.user.firstName }}</li>
                         {% else %}
                             <li ><a href="{{ path('fos_user_security_login') }}">  Se connecter </a> </li>
@@ -25,10 +26,12 @@
                     </div> -->
                     <div class="clearfix"> </div>
                 </div>
-                <ul class="grid-header"><!--
-					<li><a href="account.html">My Account</a> <label>/</label></li> -->
+                <ul class="grid-header">
                     <li><a href="{{ path('cart') }}">{% render(controller('MainBundle:Cart:cartCount')) %}<span class="cart">Mon panier</span></a> <label>/</label></li>
                     <li><a href="{{ path('checkout') }}">  Passer la commande </a> </li>
+                    {% if is_granted("ROLE_ADMIN") %}
+                        <li> <label>/</label> <a href="{{ path('easyadmin') }}">Admin</a> </li>
+                    {% endif %}
                 </ul>
                 <div class="clearfix"> </div>
             </div>
@@ -38,7 +41,6 @@
                     <ul>
                         <li {% if active == 'home' %}class="active"{% endif %} ><a href="{{ path('index1') }}" >Accueil  </a><label>- </label> </li>
                         <li {% if active == 'speciality' %}class="active"{% endif %} ><a href="{{ path('speciality', {'category' : 'liste'}) }}">Specialités</a><label>- </label></li>
-                        <li {% if active == 'galery' %}class="active"{% endif %} ><a href="{{ path('galery') }}" > Galerie</a><label>- </label></li>
                         <li {% if active == 'about' %}class="active"{% endif %} ><a href="{{ path('about') }}" > A propos</a><label>- </label></li>
                         <li {% if active == 'contact' %}class="active"{% endif %} ><a href="{{ path('contact') }}">Contact</a></li>
                     </ul>

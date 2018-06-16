@@ -11,29 +11,14 @@
 	<div class="container" style="padding-top: 100px;">
 			<div class="specials" style="padding-top: 0;">
 				<div class="special-bottom">
-
-					<div class="col-md-6 bottom-special" style="background-image: url({{ asset('bundles/main/images/gal29.jpg') }});">
-						<a href="{{ path('speciality', {'category' : 'africaine'}) }}" class="details">Africaine</a>
-					</div>
-
-					<div class="col-md-6 bottom-special-1" style="background-image: url({{ asset('bundles/main/images/gal29.jpg') }});">
-						<a href="{{ path('speciality', {'category' : 'international'}) }}" class="details">International</a>
-					</div>
-					<div class="clearfix"> </div>
+					{% for key, value in specialityList %}
+						{% if loop.first or loop.index == 2 or loop.index == 3 or loop.index == 4 or loop.index == 1 %}
+							<div class="col-md-5 bottom-special" style="background-image: url({{ asset('images/'~value.specialitylistName) }});">
+								<a href="{{ path('speciality', {'category' : value.title}) }}" class="details">{{ value.title }}</a>
+							</div>
+						{% endif %}
+					{% endfor %}
 				</div>
-
-
-				<div class="special-bottom">
-					<div class="col-md-6 bottom-special-3" style="background-image: url({{ asset('bundles/main/images/gal29.jpg') }});">
-						<a href="{#{{ path('speciality', {'item' :}) }}#}" class="details">AFRICAINE</a>
-					</div>
-					<div class="col-md-6 bottom-special-2" style="background-image: url({{ asset('bundles/main/images/gal29.jpg') }});">
-						<a href="{#{{ path('speciality', {'item' :}) }}#}" class="details">INTERNATIONALE</a>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-
-
 			</div>
 		</div>
 

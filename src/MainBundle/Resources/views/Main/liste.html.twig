@@ -15,96 +15,17 @@
 
                     {% if specialityList is not empty %}
                         {% for key, value in specialityList %}
-                            <div class="col-sm-3 col-md-4">
+                            <div class="col-sm-3 col-md-4 speciality-img" >
                                 <a href="{{ path('speciality', {'category' : value.title}) }}" >
-                                    <img src="{{ asset('images/'~value.specialitylistName) }}" class="img-responsive" alt="">
+                                    <img src="{{ image('images/'~value.specialitylistName).forceResize(285,226) }}" class="img-responsive" alt="">
                                 </a>
                                 <h5><a href="{{ path('speciality', {'category' : value.title}) }}">{{ value.title }}</a></h5>
                             </div>
+
                         {% endfor %}
                     {% endif %}
-
-
-
-
-
-
-
-                    {#
-
-                    <div class="col-md-3 special-in">
-                        <a href="{{ path('speciality', {'category' : 'africaine'}) }}" >
-                            <img src="{{ asset('bundles/main/images/gal5.jpg') }}" class="img-responsive" alt="">
-                        </a>
-                        <h5><a href="{{ path('speciality', {'category' : 'africaine'}) }}">Africaine</a></h5>
-                    </div>
-                    <div class="col-md-3 special-in">
-                        <a href="specials1.html" >
-                            <img src="{{ asset('bundles/main/images/grillades_mixtes.jpg') }}" class="img-responsive" alt="">
-                        </a>
-                        <h5><a href="specials1.html">Internationale</a></h5>
-                        <p>Coffee</p>
-                    </div>
-                    <div class="col-md-3 special-in">
-                        <a href="specials1.html" ><img src="{{ asset('bundles/main/images/gal6.jpg') }}" class="img-responsive" alt="">
-
-                        </a>
-                        <h5><a href="specials1.html">Art africain</a></h5>
-                        <p>Chili Con Carne</p>
-                    </div>
-                    <div class="col-md-3 special-in">
-                        <a href="specials1.html" ><img src="{{ asset('bundles/main/images/viande_pruneaux.jpg') }}" class="img-responsive" alt="">
-
-                        </a>
-                        <h5><a href="specials1.html">Marocaine</a></h5>
-                        <p>Cappuccino</p>
-                    </div>
-                    <div class="clearfix"> </div>
-
-                    #}
                 </div>
             </div>
-
-
-
-
-
-            {#
-
-            <div class="special-top">
-                <div class="col-md-3 special-in">
-                    <a href="single.html" ><img src="{{ asset('bundles/main/images/chawarma_poulet.jpg') }}" class="img-responsive" alt="">
-
-                    </a>
-                    <h5><a href="single.html">Sandwiches SSSSSS</a></h5>
-                    <p>Coffee CCCC</p>
-                </div>
-                <div class="col-md-3 special-in">
-                    <a href="single.html" ><img src="{{ asset('bundles/main/images/salade_mixte.jpg') }}" class="img-responsive" alt="">
-
-                    </a>
-                    <h5><a href="single.html">Salades</a></h5>
-                    <p>Egg</p>
-                </div>
-                <div class="col-md-3 special-in">
-                    <a href="single.html" ><img src="{{ asset('bundles/main/images/creme_caramel.jpg') }}" class="img-responsive" alt="">
-
-                    </a>
-                    <h5><a href="single.html">Desserts</a></h5>
-                    <p>Food</p>
-                </div>
-                <div class="col-md-3 special-in">
-                    <a href="single.html" ><img src="{{ asset('bundles/main/images/jus_mangue.jpg') }}" class="img-responsive" alt="">
-
-                    </a>
-                    <h5><a href="single.html">Jus et boissons</a></h5>
-                    <p>Tom Kha Gai</p>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-
-            #}
-
             <div class="special-bottom">
                 <div class="col-md-6 bottom-special">
                     <h5><a href="single.html">ALIQUAM CONGUE FERMENTU</a></h5>
